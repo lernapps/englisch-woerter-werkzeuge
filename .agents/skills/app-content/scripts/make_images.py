@@ -26,8 +26,8 @@ def koffer(n: int) -> str:
                 f'<text x="80" y="{y + 25}" font-size="18" font-family="sans-serif" fill="#6b6b6b">{i + 1}  noch leer</text>'
             )
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 310" role="img">'
-        '<rect width="480" height="310" fill="#f4efe2"/>'
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 350" role="img">'
+        '<rect width="480" height="350" fill="#f4efe2"/>'
         '<path d="M180 50 v-18 a10 10 0 0 1 10 -10 h100 a10 10 0 0 1 10 10 v18" fill="none" stroke="#5d4037" stroke-width="8"/>'
         '<rect x="30" y="50" width="420" height="250" rx="16" fill="#e0c9a6" stroke="#5d4037" stroke-width="4"/>'
         + "".join(rows)
