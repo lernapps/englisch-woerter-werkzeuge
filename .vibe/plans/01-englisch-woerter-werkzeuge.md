@@ -197,8 +197,8 @@ Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/
       Creator: Orchestrator: Musterseite umschreiben: Ja; übrige Seiten ohne Rückfragen nach dem Muster; Gesamtcheck und Sprachprüfung vor dem Vorschau-PR; Push nur work
 - [x] Seite das-brauchst-du (Kapitel 1, recap relativsaetze, grammatik-fachbegriffe)
 - [x] Seite wortfamilien (Chat, Silbenleiste, zerlegen und bilden, Übungen)
-- [ ] Seite das-brauchst-du (Kapitel 2, recap praepositionen-ort)
-- [ ] Seite phrasal-verbs (Sachfall, Teilchen zuordnen, Pronomenstellung, Übungen)
+- [x] Seite das-brauchst-du (Kapitel 2, recap praepositionen-ort)
+- [x] Seite phrasal-verbs (Sachfall, Teilchen zuordnen, Pronomenstellung, Übungen)
 - [ ] Seite false-friends (Fall mit Übersetzung, Warnschild, Übungen)
 - [ ] Seite sprachvergleich (Regeln ableiten, eigene Vergleichsregel, Rückblick)
 - [ ] Prüfung Wortbelege: Skript über alle Seiten (keine Lösung im Text darüber, Wörter vorher eingeführt, Fakten mit Quelle), Inhaltsführer mit Quellen und Wörterliste
