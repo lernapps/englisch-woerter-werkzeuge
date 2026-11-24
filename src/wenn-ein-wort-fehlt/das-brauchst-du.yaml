@@ -9,12 +9,12 @@ blocks:
     title: Das solltest du schon können
     blocks:
       - type: text
-        text: "Kannst du das schon? **Ich kann notwendige Relativsätze mit who, which, that und whose bilden.** Das ist der Baustein „Notwendige Relativsätze“. Du brauchst ihn gleich: Ein Relativsatz sagt, welche Sache oder welche Person gemeint ist. Dazu kommt der Baustein „Grammatische Fachbegriffe“: **Ich kann grundlegende Fachbegriffe wie noun, verb, adjective, tense und sentence verstehen und verwenden.** Ein noun ist das Wort für ein Ding oder eine Person, ein verb sagt, was jemand tut, ein adjective sagt, wie etwas ist, und ein sentence ist ein ganzer Satz."
+        text: "Kannst du das schon? **Ich kann notwendige Relativsätze mit who, which, that und whose bilden.** Das ist der Baustein „Notwendige Relativsätze“. Du brauchst ihn gleich: Ein Relativsatz sagt, welche Sache oder welche Person gemeint ist."
+      - type: text
+        text: "Dazu kommt der Baustein „Grammatische Fachbegriffe“: **Ich kann grundlegende Fachbegriffe wie noun, verb, adjective, tense und sentence verstehen und verwenden.** Ein noun ist das Wort für ein Ding oder eine Person, ein verb sagt, was jemand tut, ein adjective sagt, wie etwas ist, ein sentence ist ein ganzer Satz und ein tense ist eine Zeitform."
       - type: table
         caption: Klassenzimmer-Poster · Der Relativsatz
         header: [Wen oder was beschreibst du?, Welches Wort?, Beispiel]
         rows:
           - [eine Person, who, The girl who sits next to me is Ellie.]
           - [eine Sache, which oder that, The book which is on the table is new.]
-      - type: text
-        text: "Nicht sicher? Wiederhole es auf den Seiten der Lernlandkarte: [Notwendige Relativsätze](https://lernapps.net/apps/map/englisch/c/relativsaetze/) und [Grammatische Fachbegriffe](https://lernapps.net/apps/map/englisch/c/grammatik-fachbegriffe/)."
