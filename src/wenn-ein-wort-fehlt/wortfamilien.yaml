@@ -62,7 +62,7 @@ blocks:
         header: [Schritt, Was du tust, Beispiel]
         rows:
           - ["1", "Schneide Anfang und Ende ab: die Vorsilbe und die Nachsilbe.", "help + ful"]
-          - ["2", "Suche den Stamm, den du schon kennst.", "help"]
+          - ["2", "Suche den Stamm, den du schon kennst. Der Stamm ist der Teil, der bleibt.", "help"]
           - [
               "3",
               "Frage, was die Silbe ändert, und setze die Bedeutung zusammen.",
@@ -190,4 +190,4 @@ blocks:
     title: Wie es weitergeht
     blocks:
       - type: text
-        text: Zwei Werkzeuge liegen im Koffer. Sie helfen dir, wenn dir ein Wort fehlt oder du eines nicht kennst. Im nächsten Kapitel vergleichst du Englisch mit Deutsch.
+        text: Zwei Werkzeuge liegen im Koffer. Sie helfen dir, wenn dir ein Wort fehlt oder du eines nicht kennst. Im nächsten Kapitel „Englisch und Deutsch vergleichen“ nimmst du den Koffer mit.

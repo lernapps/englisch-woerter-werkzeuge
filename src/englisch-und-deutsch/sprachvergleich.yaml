@@ -9,14 +9,14 @@ blocks:
     title: Zwei Sprachen, eine Familie
     blocks:
       - type: text
-        text: "Sophie liest einen kurzen Sachtext über Englisch und Deutsch. **Das kannst du danach:** Du vergleichst beide Sprachen und erklärst typische Unterschiede in Wortstellung, Wortbildung und Ausdruck mit einer eigenen Regel."
+        text: "Dein Koffer hat vier Werkzeuge. Das fünfte hilft dir, Englisch und Deutsch im Ganzen zu vergleichen. Sophie liest dazu einen kurzen Sachtext. Das Subjekt ist das, was etwas tut, das Objekt das, womit etwas getan wird. **Das kannst du danach:** Du vergleichst beide Sprachen und erklärst typische Unterschiede in Wortstellung, Wortbildung und Ausdruck mit einer eigenen Regel."
       - type: text
         text: |
           **Two languages, one family**
 
           **(1)** English and German belong to the same language family, the Germanic languages. Many words look alike, but the two languages also work in different ways.
 
-          **(2)** In a German main clause, the verb is in second place: "Heute spielt Peter Fußball." English is unusual in its family. It keeps the order subject, verb, object: "Peter plays football today."
+          **(2)** In a German main clause, the verb is in second place: "Heute spielt Peter Fußball." English is unusual in its family. It keeps the order subject, verb, object: "Peter plays football today." With "today" first, the order stays: "Today Peter plays football."
 
           **(3)** In a German subordinate clause, the verb goes to the end: "…, weil er Hunger hat." In English, the order stays the same: "… because he is hungry."
 

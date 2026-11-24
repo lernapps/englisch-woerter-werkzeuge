@@ -30,7 +30,7 @@ Die „Ich kann“-Sätze stehen wie in der Karte (nicht umformulieren). Übungs
 ## Content structure
 
 - Pfad: `src/<kapitel>/chapter.yaml`, Seiten `src/<kapitel>/<seite>.yaml`.
-- Gebaut: Kapitel 1: `das-brauchst-du`, `umschreiben` (Musterseite), `wortfamilien`; Kapitel 2: `das-brauchst-du`, `phrasal-verbs`, `false-friends`, `sprachvergleich`. Je Seite 6 bis 8 Übungen, 12 bis 18 Items.
+- Gebaut: Kapitel 1: `das-brauchst-du`, `umschreiben` (Musterseite), `wortfamilien`; Kapitel 2: `das-brauchst-du`, `phrasal-verbs`, `false-friends`, `sprachvergleich`. Je Kapitel eine Selbsteinschätzung (3 Übungen je Seite, in `chapter.yaml`). Je Seite 6 bis 8 Übungen, 12 bis 18 Items.
 - Rahmen: Der Werkzeugkoffer. Jede Seite stellt ein Werkzeug als Karte „Was tun, wenn …?“ vor (Tabelle „Klassenzimmer-Poster · Werkzeugkarte …“, drei kurze Schritte) mit Merke-Kasten.
 - Abschnitts-IDs in dieser Reihenfolge: `einstieg` (Lesestück, erste leichte Aufgabe, „Das kannst du danach“), `werkzeug` (Karte, Merke, Wörter im Vokabelblock), `uebung` (mindestens vier Übungen, leicht → schwer), `anwenden` (`open-task`), `weiter` (nächster Schritt; am Kapitelende ein Rückblick). Titel sagen, was der Abschnitt tut. Wiederholungsseite: nur Text und Tabelle.
 - Lesestück: Kapitel 1 ein Chat (Text, Randglossar), etwa 150 bis 300 Wörter, höchstens eins je Seite; Kapitel 2 ein sachlicher Fall mit Daten und Quelle, keine erfundenen Kinder, Sophie nur als Name der Nutzerin. Die Lesestücke zählen nicht zu den 350 Wörtern Erklärtext.
@@ -80,7 +80,7 @@ Jedes steht auf der Seite mit Bedeutung (Vokabelblock, Merke oder Rückmeldung d
 
 1. Baustein auf der Karte wählen; Voraussetzungen auf früheren Seiten oder auf einer Wiederholungsseite.
 2. Seite `src/<kapitel>/<seite>.yaml` mit den Abschnitten `einstieg`, `werkzeug`, `uebung`, `anwenden`, `weiter` anlegen, in `chapter.yaml` eintragen, Competency-ID setzen.
-3. Werkzeugkarte als Poster-Tabelle, Übungen aus den Mustern, je mit `mistakes` und `hint`; 1 bis 3 je Seite in `selfAssessment`.
+3. Werkzeugkarte als Poster-Tabelle, Übungen aus den Mustern, je mit `mistakes` und `hint`; 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt.
 4. Wörter gegen den Grundwortschatz prüfen und hier listen; Hörsätze gibt es nicht.
 5. `npx --no -- lernapps check`; committen.
 

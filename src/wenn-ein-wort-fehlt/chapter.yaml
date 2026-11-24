@@ -3,3 +3,13 @@ title: Wenn mir ein Wort fehlt
 summary: Du füllst den Werkzeugkoffer mit zwei Werkzeugen. Du umschreibst ein Wort, das dir fehlt, und erschließt ein unbekanntes Wort über seine Wortfamilie.
 pages: [das-brauchst-du, umschreiben, wortfamilien]
 scope: Kapitel 1 stellt die ersten zwei Werkzeuge des Koffers vor. Mit dem Umschreiben sagen die Lernenden, was ein Ding oder eine Person ist oder tut, wenn ihnen das englische Wort fehlt. Mit der Wortfamilie erschließen sie ein unbekanntes Wort aus Stamm, Vorsilbe und Nachsilbe.
+selfAssessment:
+  pages:
+    - exercises:
+        - /wenn-ein-wort-fehlt/umschreiben/#umschreiben-wort
+        - /wenn-ein-wort-fehlt/umschreiben/#umschreiben-relativsatz
+        - /wenn-ein-wort-fehlt/umschreiben/#umschreiben-gegenteil
+    - exercises:
+        - /wenn-ein-wort-fehlt/wortfamilien/#wortfamilien-bilden
+        - /wenn-ein-wort-fehlt/wortfamilien/#wortfamilien-erschliessen
+        - /wenn-ein-wort-fehlt/wortfamilien/#wortfamilien-schreiben

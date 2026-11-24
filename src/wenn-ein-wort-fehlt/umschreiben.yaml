@@ -9,7 +9,7 @@ blocks:
     title: Ein Wort fehlt im Klassenchat
     blocks:
       - type: text
-        text: "Du kennst das: Du willst etwas sagen, aber ein Wort fehlt dir. Sophie geht es im Klassenchat von Mr Hill so. Lies den Chat und achte darauf, was sie tut. **Das kannst du danach:** Du umschreibst ein Wort, das dir fehlt, mit einem Relativsatz oder mit seinem Gegenteil."
+        text: "Du kennst das: Du willst etwas sagen, aber ein Wort fehlt dir. Sophie geht es im Klassenchat so. Dort schreiben auch Ellie, Amir und ihr Lehrer Mr Hill. Lies den Chat und achte darauf, was sie tut. **Das kannst du danach:** Du umschreibst ein Wort, das dir fehlt, mit einem Relativsatz oder mit seinem Gegenteil."
       - type: text
         text: |
           **(1) Sophie:** Hi Ellie! I am in the shop with Mrs Parker. I want to buy a … sorry, I don't know the word!
@@ -83,7 +83,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Weg B klappt, wenn es zu dem Wort genau ein Gegenteil gibt. Setze **not** direkt vor das Gegenteil. Mit **very** oder **a bit** davor sagt der Satz etwas anderes.
+              Weg B klappt, wenn es zu dem Wort genau ein Gegenteil gibt. Setze **not** direkt vor das Gegenteil.
   - type: section
     id: uebung
     title: Übung
@@ -145,19 +145,19 @@ blocks:
         form: { case: hint, punctuation: ok }
         items:
           - source: Ein Messer ist eine Sache, mit der man Brot schneidet.
-            target: A knife is a thing (which|that) (you use to cut bread|you cut bread with|cuts bread).
+            target: A knife is a thing (which|that) (you use to cut bread|you cut bread with|cuts bread|you can cut bread with).
             mistakes:
               - answer: A knife is a thing who you use to cut bread.
                 message: Für eine Sache nimmst du which oder that, nicht who.
           - source: Eine Lehrerin ist eine Person, die Kinder in der Schule unterrichtet.
-            target: A teacher is a person (who|that) teaches (children|kids|pupils|students) at school.
+            target: A teacher is a person (who|that) teaches (children|kids|pupils|students) (at|in) school.
             mistakes:
               - answer: A teacher is a person which teaches children at school.
                 message: Für eine Person nimmst du who oder that, nicht which.
               - answer: A teacher is a person teaches children at school.
                 message: Dir fehlt who.
           - source: Ein Koch ist eine Person, die in der Küche Essen macht.
-            target: A cook is a person (who|that) (makes|prepares|cooks) food in the kitchen.
+            target: A cook is a person (who|that) (makes food|makes meals|prepares food|prepares meals|cooks food|cooks meals|cooks) in the kitchen.
             mistakes:
               - answer: A cook is a person which makes food in the kitchen.
                 message: Für eine Person nimmst du who oder that, nicht which.
@@ -168,7 +168,7 @@ blocks:
         options:
           - text: It is very difficult.
             correct: false
-            info: very difficult heißt sehr schwer. Das ist nicht easy.
+            info: very difficult heißt sehr schwer. Das ist nicht easy, sondern das Gegenteil mit very.
           - text: It is not difficult.
             correct: true
             info: Das Gegenteil von difficult mit not umschreibt easy.

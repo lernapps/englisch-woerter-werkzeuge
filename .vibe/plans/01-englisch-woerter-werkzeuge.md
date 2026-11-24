@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: code
+phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -55,6 +55,8 @@ Die Lernenden bauen sich einen Werkzeugkoffer für Wörter: Sie umschreiben ein 
   - Kapitel `wenn-ein-wort-fehlt` (7-8): `das-brauchst-du` (recap: `relativsaetze`, `grammatik-fachbegriffe`) · `umschreiben` (`umschreiben`) · `wortfamilien` (`wortfamilien`). Nicht geübt in der App: relativsaetze (englisch-saetze-verbinden), grammatik-fachbegriffe (hello-millbrook).
   - Kapitel `englisch-und-deutsch` (9-10): `das-brauchst-du` (recap: `praepositionen-ort`) · `phrasal-verbs` · `false-friends` · `sprachvergleich`. Nicht geübt in der App: praepositionen-ort (englisch-dinge-mengen-orte).
 - Rückfrage an die Orchestrator-Session: (1) Darf Sophie (15 bis 16) in Kapitel 2 als Nutzerin des Falls vorkommen, oder ganz sachlich ohne Figur? (2) Reicht „Kein Audio“?
+- Geprüft und behoben (Code): Lerner-Check der Musterseite `umschreiben` und Gesamtcheck der App je mit einem Sub-Agenten als Lernender, dazu eine Prüfung der englischen und deutschen Sprache mit einem Sub-Agenten. Behoben: Kurzformen und natürlicheres Englisch im Chat, zusätzliche richtige Varianten bei den Schreibaufgaben (which|that, you cut … with, Do not, is looking after, Perhaps), falsche Behauptungen entschärft (meistens, bei manchen Wörtern, in Aussagesätzen), Begriffe Vor- und Nachsilbe, Weg A/B, Pronomen mit Beispiel, Stamm erklärt, fehlende Wörter (put on, get up) im Text eingeführt, Verbindung zwischen den Seiten (Mr Hill gibt das Infoblatt, Koffer mit vier Werkzeugen), Bildbeschriftungen größer und kontrastreicher. Nicht behoben (bewusst): Lernende leiten die Vergleichsregeln auf der letzten Seite teils aus einem Text ab, der sie nennt (Sachtext mit Quellen); das Warnschild-Vokabular steht vor den Übungen, die es abfragen (Wörter vorher einführen).
+- Selbsteinschätzung: je Kapitel eine (Standard), 3 Übungen je Seite, nur Übungen, die ohne die Seite klar sind.
 - Wörter: Grundwortschatz A1/A2 der Karte; Wörter darüber werden auf der Seite erklärt und im Inhaltsführer gelistet.
 
 ## Explore
@@ -207,7 +209,7 @@ Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/
 - [x] Run `npx --no -- lernapps check` until it passes.
 - [x] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
-- [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
+- [x] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
       fixed.
 
 ## Commit
@@ -220,7 +222,7 @@ Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/
 
 ### Tasks
 
-- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+- [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
 - [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.

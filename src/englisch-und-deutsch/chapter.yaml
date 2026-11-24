@@ -3,3 +3,17 @@ title: Englisch und Deutsch vergleichen
 summary: "Du nimmst den Koffer mit und füllst ihn mit drei Werkzeugen für den Vergleich: phrasal verbs, false friends und eigene Vergleichsregeln."
 pages: [das-brauchst-du, phrasal-verbs, false-friends, sprachvergleich]
 scope: Kapitel 2 stellt die Werkzeuge für den Vergleich vor. Phrasal verbs sind Verb plus Teilchen mit eigenem Sinn. False friends sind Wörter, die wie deutsche aussehen und etwas anderes bedeuten. Am Ende formulieren die Lernenden Vergleichsregeln zu Wortbildung, Wortstellung und Ausdruck.
+selfAssessment:
+  pages:
+    - exercises:
+        - /englisch-und-deutsch/phrasal-verbs/#phrasal-verbs-teilchen
+        - /englisch-und-deutsch/phrasal-verbs/#phrasal-verbs-pronomen
+        - /englisch-und-deutsch/phrasal-verbs/#phrasal-verbs-schreiben
+    - exercises:
+        - /englisch-und-deutsch/false-friends/#false-friends-wort
+        - /englisch-und-deutsch/false-friends/#false-friends-gift
+        - /englisch-und-deutsch/false-friends/#false-friends-schreiben
+    - exercises:
+        - /englisch-und-deutsch/sprachvergleich/#sprachvergleich-stellung
+        - /englisch-und-deutsch/sprachvergleich/#sprachvergleich-wortbildung
+        - /englisch-und-deutsch/sprachvergleich/#sprachvergleich-ausdruck

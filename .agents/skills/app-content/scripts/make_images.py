@@ -18,12 +18,12 @@ def koffer(n: int) -> str:
         if i < n:
             rows.append(
                 f'<rect x="60" y="{y}" width="360" height="36" rx="8" fill="{COLOURS[i]}"/>'
-                f'<text x="80" y="{y + 25}" font-size="18" font-family="sans-serif" fill="#ffffff">{i + 1}  {name}</text>'
+                f'<text x="80" y="{y + 25}" font-size="20" font-family="sans-serif" fill="#ffffff">{i + 1}  {name}</text>'
             )
         else:
             rows.append(
                 f'<rect x="60" y="{y}" width="360" height="36" rx="8" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-dasharray="6 4"/>'
-                f'<text x="80" y="{y + 25}" font-size="18" font-family="sans-serif" fill="#6b6b6b">{i + 1}  noch leer</text>'
+                f'<text x="80" y="{y + 25}" font-size="20" font-family="sans-serif" fill="#4a4a4a">{i + 1}  noch leer</text>'
             )
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 350" role="img">'
@@ -53,10 +53,10 @@ def wortfamilie() -> str:
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" role="img">'
         '<rect width="480" height="290" fill="#f4efe2"/>'
         + "".join(rows)
-        + '<text x="360" y="60" font-size="16" font-family="sans-serif" fill="#1b1b1b">Stamm</text>'
-        '<text x="360" y="85" font-size="16" font-family="sans-serif" fill="#1b1b1b">grün</text>'
-        '<text x="360" y="130" font-size="16" font-family="sans-serif" fill="#1b1b1b">Silbe</text>'
-        '<text x="360" y="155" font-size="16" font-family="sans-serif" fill="#1b1b1b">orange</text>'
+        + '<text x="360" y="60" font-size="18" font-family="sans-serif" fill="#1b1b1b">Stamm</text>'
+        '<text x="360" y="85" font-size="18" font-family="sans-serif" fill="#1b1b1b">grün</text>'
+        '<text x="360" y="130" font-size="18" font-family="sans-serif" fill="#1b1b1b">Nachsilbe</text>'
+        '<text x="360" y="155" font-size="18" font-family="sans-serif" fill="#1b1b1b">orange</text>'
         "</svg>\n"
     )
 

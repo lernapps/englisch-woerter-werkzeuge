@@ -9,7 +9,7 @@ blocks:
     title: Ein Infoblatt für Gastschüler
     blocks:
       - type: text
-        text: "Sophie liest das Infoblatt eines Austauschprogramms. Es ist in einfachem Englisch geschrieben, und fast jede Zeile hat ein Verb mit Teilchen. **Das kannst du danach:** Du liest ein Verb mit Teilchen als eine Einheit und benutzt es richtig im Satz."
+        text: "Mr Hill hat Sophie ein Infoblatt eines Austauschprogramms gegeben. Es ist in einfachem Englisch geschrieben, und fast jede Zeile hat ein Verb mit Teilchen. **Das kannst du danach:** Du liest ein Verb mit Teilchen als eine Einheit und benutzt es richtig im Satz."
       - type: text
         text: |
           **Welcome pack for guest students**
@@ -25,6 +25,8 @@ blocks:
           **(5)** Get up on time, because the school bus doesn't wait.
 
           **(6)** Take off your shoes at the door. Turn off the lights when you leave your room.
+
+          **(7)** In winter, put on a warm coat.
       - type: vocabulary
         caption: Wörter aus dem Infoblatt
         languages: { source: de, target: en }
@@ -73,8 +75,8 @@ blocks:
           - ["2", "Prüfe den Sinn im Satz oder im Wörterbuch.", "sit down: sich hinsetzen"]
           - [
               "3",
-              "Bei Verben, die man trennen kann: Ein Pronomen steht vor dem Teilchen, ein Nomen davor oder dahinter.",
-              "put it away · put away the toys · put the toys away",
+              "Bei Verben, die man trennen kann: Ein Pronomen wie it steht vor dem Teilchen, ein Nomen davor oder dahinter.",
+              "write it down · write down the word · write the word down",
             ]
       - type: note
         title: Merke
@@ -125,26 +127,26 @@ blocks:
                 message: turn on heißt anschalten, nicht ausschalten.
               - answer: Please turn up the radio.
                 message: turn up heißt lauter stellen.
-          - source: Zieh bitte deinen Mantel an.
-            target: Please put [on] your coat.
+          - source: Zieh bitte deine Jacke an.
+            target: Please put [on] your jacket.
             distractors: [[off, away]]
             mistakes:
-              - answer: Please put off your coat.
+              - answer: Please put off your jacket.
                 message: put off heißt verschieben, nicht anziehen.
-              - answer: Please put away your coat.
+              - answer: Please put away your jacket.
                 message: put away heißt wegräumen.
           - source: Steh bitte auf.
-            target: Please stand [up].
+            target: Please get [up].
             distractors: [[down, out]]
             mistakes:
-              - answer: Please stand down.
-                message: stand down heißt zurücktreten, nicht aufstehen.
-              - answer: Please stand out.
-                message: stand out heißt auffallen.
+              - answer: Please get down.
+                message: get down heißt herunterkommen, nicht aufstehen.
+              - answer: Please get out.
+                message: get out heißt hinausgehen.
         hint: Frage dich, welches Teilchen zur deutschen Bedeutung passt.
       - type: single-choice
         id: phrasal-verbs-pronomen
-        text: "Welcher Satz ist richtig? Das Objekt ist das Pronomen it."
+        text: "Welcher Satz ist richtig? Du ersetzt das Radio durch das Pronomen it."
         options:
           - text: Please turn off it.
             correct: false
@@ -171,14 +173,14 @@ blocks:
               - answer: Don't up give!
                 message: Das Teilchen steht hinter dem Verb.
           - source: Er kümmert sich um den Hund.
-            target: He (looks after|takes care of) the dog.
+            target: He (looks after|is looking after|takes care of|is taking care of) the dog.
             mistakes:
               - answer: He looks the dog after.
                 message: Bei look after steht das Teilchen direkt hinter dem Verb.
-          - source: Wir ziehen unsere Jacken an.
-            target: We (put on our jackets|put our jackets on|are putting on our jackets|are putting our jackets on).
+          - source: Wir ziehen unsere Hüte an.
+            target: We (put on our hats|put our hats on|are putting on our hats|are putting our hats on).
             mistakes:
-              - answer: We put to our jackets.
+              - answer: We put to our hats.
                 message: Das Teilchen heißt on. to ist hier falsch.
         hint: Verb und Teilchen gehören zusammen. Prüfe, ob das Objekt ein Nomen oder ein Pronomen ist.
   - type: section

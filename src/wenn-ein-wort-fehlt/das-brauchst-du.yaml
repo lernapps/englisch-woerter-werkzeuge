@@ -16,5 +16,5 @@ blocks:
         caption: Klassenzimmer-Poster · Der Relativsatz
         header: [Wen oder was beschreibst du?, Welches Wort?, Beispiel]
         rows:
-          - [eine Person, who, The girl who sits next to me is Ellie.]
+          - [eine Person, who oder that, The girl who sits next to me is Ellie.]
           - [eine Sache, which oder that, The book which is on the table is new.]
