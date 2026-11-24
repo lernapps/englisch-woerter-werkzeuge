@@ -5,59 +5,84 @@ description: Use for any content work in this app - researching, writing, extend
 
 # Content guide of this app
 
-<!--
-Skeleton. Delete this comment when you fill the guide.
-- When: after the plan is confirmed, before any content. Replace every placeholder comment below; none may remain
-  (`lernapps check`, rule app-content-guide, fails once the plan is in Commit).
-- Keep the headings.
-- Concrete, for an agent without your conversation: files, ids, data files, one example.
-  - No: "Use varied exercises with figures where they help."
-  - Yes: "Every page ends with section `uebung`: one `generated` exercise of pattern 'Ohmsches Gesetz' from
-    `src/data/widerstaende.yaml`, one `matching` of symbols and parts."
-- Content decision changes → update this file in the same commit.
-- Public: no personal data, no goals of one learner.
--->
+„Werkzeuge für Wörter“: Explainer (Strang-App `englisch/wortschatz`, Format 2, Sprache Deutsch, englische Beispiele, britisches Englisch). Auftrag: Issue lernapps/apps#485 (Epic lernapps/apps#489, Konventionen dort). Gebaut sind beide Kapitel: Kapitel 1 (Stufe 7-8) und Kapitel 2 (Stufe 9-10).
 
 ## Curriculum
 
-<!-- FILL IN: Land, Schulform, Jahrgang; orientation (Lehrplan: document, issuer, year, address, page and unit per
-part; welcome, not required); where the creator's material differs, and which one the app follows. -->
+Englisch als erste Fremdsprache, Stufe 7-8 (Kapitel 1) und 9-10 (Kapitel 2). Kein Lehrplan: Reihenfolge und Bausteine kommen aus der Lernlandkarte `https://lernapps.net/apps/map/englisch.json` (Fokus `competency`, Strang `wortschatz`). Nicht hier: Wortfelder (Situations-Explainer), die Fachbegriffe noun und verb (#470), Lautschrift (#482).
 
 ## Competencies
 
-<!-- FILL IN: every competency as "Ich kann …", grouped by chapter; per competency: page or round (file, id),
-exercise ids. -->
+Alle fünf sind Lücken der Karte. Eine Seite je Baustein, Ordnung nach `requires`.
+
+1. Kapitel `wenn-ein-wort-fehlt` („Wenn mir ein Wort fehlt“, Stufe 7-8)
+   - Wiederholung `recap: [englisch/relativsaetze, englisch/grammatik-fachbegriffe]` → `das-brauchst-du` (ohne Übung, ohne `competencies`)
+   - `umschreiben` → `umschreiben` (Musterseite): „Ich kann ein Wort, das mir fehlt, mit anderen Wörtern, Synonymen oder Gegenteilen umschreiben.“
+   - `wortfamilien` → `wortfamilien`: „Ich kann Wörter einer Wortfamilie erkennen und mit Vor- und Nachsilben neue Wörter erschließen (help, helpful, helpless).“
+2. Kapitel `englisch-und-deutsch` („Englisch und Deutsch vergleichen“, Stufe 9-10)
+   - Wiederholung `recap: englisch/praepositionen-ort` → `das-brauchst-du`
+   - `phrasal-verbs` → `phrasal-verbs`: „Ich kann häufige phrasal verbs wie give up, look after und find out verstehen und verwenden.“
+   - `false-friends` → `false-friends`: „Ich kann typische false friends wie become, chef und sensible richtig verwenden.“
+   - `sprachvergleich` → `sprachvergleich`: „Ich kann Englisch und Deutsch vergleichen und typische Unterschiede in Wortbildung, Wortstellung und Ausdruck erklären.“
+
+Die „Ich kann“-Sätze stehen wie in der Karte (nicht umformulieren). Übungs-IDs: Präfix = Seite (`umschreiben-relativsatz`).
 
 ## Content structure
 
-<!-- FILL IN: how a chapter, page or round is built: sections or question groups in order, ids or titles, what
-each holds; length. -->
+- Pfad: `src/<kapitel>/chapter.yaml`, Seiten `src/<kapitel>/<seite>.yaml`.
+- Rahmen: Der Werkzeugkoffer. Jede Seite stellt ein Werkzeug als Karte „Was tun, wenn …?“ vor (Tabelle „Klassenzimmer-Poster · Werkzeugkarte …“, drei kurze Schritte) mit Merke-Kasten.
+- Abschnitts-IDs in dieser Reihenfolge: `einstieg` (Lesestück, erste leichte Aufgabe, „Das kannst du danach“), `werkzeug` (Karte, Merke, Wörter im Vokabelblock), `uebung` (mindestens vier Übungen, leicht → schwer), `anwenden` (`open-task`), `weiter` (nächster Schritt; am Kapitelende ein Rückblick). Titel sagen, was der Abschnitt tut. Wiederholungsseite: nur Text und Tabelle.
+- Lesestück: Kapitel 1 ein Chat (Text, Randglossar), etwa 150 bis 300 Wörter, höchstens eins je Seite; Kapitel 2 ein sachlicher Fall mit Daten und Quelle, keine erfundenen Kinder, Sophie nur als Name der Nutzerin. Die Lesestücke zählen nicht zu den 350 Wörtern Erklärtext.
+- Länge: höchstens 350 Wörter Erklärtext, höchstens 4 Textblöcke hintereinander, Bild oder Übung in den ersten vier Blöcken, höchstens etwa 25 Items und 10 Übungen je Seite.
+- Keine Figuren-Einführung im Seitentext: keine Altersangaben, keine Familie, kein Datum; die Startseite nennt nur Namen und Rollen (Sophie, Ellie, Amir, Mr Hill, Mrs Parker, Peter).
+- Anrede „du“.
 
 ## Terminology
 
-<!-- FILL IN: terms used and avoided (why); units, notation; how learners are addressed; glossary terms with
-wording. -->
+- „Ausdruck“ (fester Ausdruck), nie „Wendung“. Fachbegriffe noun, verb, adjective, sentence.
+- Immer gleich: **Werkzeugkoffer**, **Werkzeugkarte** („Was tun, wenn …?“), **Umschreiben**, **Wortfamilie**, **Stamm**, **Vorsilbe** (prefix), **Nachsilbe** (suffix), **Teilchen** (bei phrasal verbs), **Warnschild** (false friends), **Vergleichsregel**.
+- Britisches Englisch. Englische Aufgaben enthalten kein deutsches Wort; die deutsche Vorgabe steht in `source`. Neue englische Wörter mit deutscher Bedeutung im Vokabelblock.
+- Aussprache: keine Lautschrift (gehört zu #482); kein Audio in dieser App.
 
 ## Exercise patterns
 
-<!-- FILL IN: per pattern: name, competency, archetype form (block or question type, fixed parts, what varies),
-one example (file, id), data file. -->
+Aufbau leicht → schwer: wählen/zuordnen → Lücke → schreiben mit Cue → übersetzen/frei. Je Übung `mistakes` mit eigener Meldung und `hint`; gleichwertige Antworten mit `(a|b)`.
+
+- Umschreiben ableiten: `language-task` mode `choice` (Beschreibung → Wort) und `write` (Relativsatz bilden).
+- Zerlegen und bilden: mode `table` (Stamm, Silbe, Bedeutung), `gap`, `matching` Silbe ↔ Bedeutung.
+- Teilchen zuordnen: mode `choice`, `ordering`, `write`.
+- Warnschild: `single-choice` mit Fall, mode `write` in beide Richtungen.
+- Regel ableiten: `single-choice` mit Begründung, `open-task` für die eigene Vergleichsregel.
+- Distraktoren nur echte Lernerfehler, je Fehler eine eigene Meldung.
+- Keine Komponente (`prefer-built-in-block`); keine Datendateien: jede Tatsache steht einmal in ihrer Seite.
 
 ## Figures
 
-<!-- FILL IN: figure kinds and images, for what; conventions (colours, labels, units, orientation, sizes); alt
-texts and captions; image origin and licence. -->
+- Eigene Zeichnungen, `CC-BY-4.0`, Quelle „eigene Zeichnung“, `src/images/`, nur wo ein Bild etwas zeigt (Silbenleiste für `wortfamilien`, Warnschild für `false-friends`). `alt` sagt, was das Bild zeigt, nie die Lösung. Schrift mindestens 16 im 480er viewBox.
+- Poster sind `table`-Blöcke: „Klassenzimmer-Poster · Werkzeugkarte …“. Wörter stehen im Vokabelblock der Seite, nicht in einer Tabelle.
 
 ## Sources
 
-<!-- FILL IN: sources linked or relied on (Lehrplan, second explanations, videos, articles), how verified, what
-is left out; the creator's material stays local, never committed. -->
+Karte `https://lernapps.net/apps/map/englisch.json`; Grundwortschatz `https://lernapps.net/apps/map/englisch/grundwortschatz/` (A1/A2). Fakten aus Wikipedia (nur Fakten, keine Sätze, CC BY-SA), geöffnet am 2026-11-24: `False friend` (Definition, gift/Gift), `English phrasal verbs` (Verb plus Teilchen, Sinn nicht aus den Teilen ableitbar, Pronomen steht vor dem Teilchen: hand it in), `Affix` (Vor- und Nachsilben, Stamm), `V2 word order` (Deutsch: Verb an zweiter Stelle im Hauptsatz, am Ende im Nebensatz; Englisch überwiegend Subjekt-Verb-Objekt), `Compound (linguistics)` (Zusammensetzungen). Nicht geprüft und weggelassen: Häufigkeit einzelner phrasal verbs. Wörter außerhalb von A1/A2 stehen unten, wenn die Seiten gebaut sind. Beispielsätze sind eigene. Material der Ersteller:in: keines.
+
+### Wörter außerhalb des Grundwortschatzes
+
+(Wird mit den Seiten ergänzt; nur Wörter, die vorkommen.)
 
 ## Adding a chapter or round
 
-<!-- FILL IN: the steps for a new chapter (explainer) or round (quiz), in order, with the files: competencies,
-content, exercises from the patterns, entry topics, check, commit. -->
+1. Baustein auf der Karte wählen; Voraussetzungen auf früheren Seiten oder auf einer Wiederholungsseite.
+2. Seite `src/<kapitel>/<seite>.yaml` mit den Abschnitten `einstieg`, `werkzeug`, `uebung`, `anwenden`, `weiter` anlegen, in `chapter.yaml` eintragen, Competency-ID setzen.
+3. Werkzeugkarte als Poster-Tabelle, Übungen aus den Mustern, je mit `mistakes` und `hint`; 1 bis 3 je Seite in `selfAssessment`.
+4. Wörter gegen den Grundwortschatz prüfen und hier listen; Hörsätze gibt es nicht.
+5. `npx --no -- lernapps check`; committen.
 
 ## Rules learned from mistakes
 
-<!-- FILL IN: one line per rule with the mistake it came from. "None yet." until the first. -->
+Aus der Reihe (Konventionen lernapps/apps#489, Abschnitte 7 und 8):
+- Jede Übung fragt nur Wörter ab, die vorher auf der Seite stehen; eine Tabelle, die eine Übung beantwortet, steht nicht direkt darüber.
+- Poster, Merke, Einstieg und Bild nennen andere Beispiele als die Übungen darunter (keine Lösung im Text darüber).
+- Als Auswahl nur echte Lernerfehler, keine Unwörter; jeder Distraktor und jedes typische Fehlerbild eine eigene Meldung; ein Einstiegs-`single-choice` hat mindestens drei Optionen.
+- Mit `(a|b)` gleichwertige richtige Antworten zulassen.
+- Menschen sind keine „Dinge“; Beziehungen haben keinen „Besitzer“.
+- Keine Figuren-Einführung im Seitentext; Aussagen ohne geöffnete Quelle weglassen.
