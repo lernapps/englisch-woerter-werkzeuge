@@ -30,10 +30,12 @@ Die „Ich kann“-Sätze stehen wie in der Karte (nicht umformulieren). Übungs
 ## Content structure
 
 - Pfad: `src/<kapitel>/chapter.yaml`, Seiten `src/<kapitel>/<seite>.yaml`.
+- Gebaut: Kapitel 1: `das-brauchst-du`, `umschreiben` (Musterseite), `wortfamilien`; Kapitel 2: `das-brauchst-du`, `phrasal-verbs`, `false-friends`, `sprachvergleich`. Je Seite 6 bis 8 Übungen, 12 bis 18 Items.
 - Rahmen: Der Werkzeugkoffer. Jede Seite stellt ein Werkzeug als Karte „Was tun, wenn …?“ vor (Tabelle „Klassenzimmer-Poster · Werkzeugkarte …“, drei kurze Schritte) mit Merke-Kasten.
 - Abschnitts-IDs in dieser Reihenfolge: `einstieg` (Lesestück, erste leichte Aufgabe, „Das kannst du danach“), `werkzeug` (Karte, Merke, Wörter im Vokabelblock), `uebung` (mindestens vier Übungen, leicht → schwer), `anwenden` (`open-task`), `weiter` (nächster Schritt; am Kapitelende ein Rückblick). Titel sagen, was der Abschnitt tut. Wiederholungsseite: nur Text und Tabelle.
 - Lesestück: Kapitel 1 ein Chat (Text, Randglossar), etwa 150 bis 300 Wörter, höchstens eins je Seite; Kapitel 2 ein sachlicher Fall mit Daten und Quelle, keine erfundenen Kinder, Sophie nur als Name der Nutzerin. Die Lesestücke zählen nicht zu den 350 Wörtern Erklärtext.
 - Länge: höchstens 350 Wörter Erklärtext, höchstens 4 Textblöcke hintereinander, Bild oder Übung in den ersten vier Blöcken, höchstens etwa 25 Items und 10 Übungen je Seite.
+- Lesestücke: `umschreiben` und `wortfamilien` ein Chat (Sophie, Ellie, Amir, Mr Hill, Mrs Parker nur genannt); `phrasal-verbs` ein Infoblatt für Gastschüler; `false-friends` eine Café-Mail mit Programm-Übersetzung (deutsches Original, englische Übersetzung, eine Zeile stimmt); `sprachvergleich` ein kurzer Sachtext mit Quellen. Alle Texte sind eigene, nach Fakten (siehe Sources).
 - Keine Figuren-Einführung im Seitentext: keine Altersangaben, keine Familie, kein Datum; die Startseite nennt nur Namen und Rollen (Sophie, Ellie, Amir, Mr Hill, Mrs Parker, Peter).
 - Anrede „du“.
 
@@ -58,7 +60,7 @@ Aufbau leicht → schwer: wählen/zuordnen → Lücke → schreiben mit Cue → 
 
 ## Figures
 
-- Eigene Zeichnungen, `CC-BY-4.0`, Quelle „eigene Zeichnung“, `src/images/`, nur wo ein Bild etwas zeigt (Silbenleiste für `wortfamilien`, Warnschild für `false-friends`). `alt` sagt, was das Bild zeigt, nie die Lösung. Schrift mindestens 16 im 480er viewBox.
+- Eigene Zeichnungen, `CC-BY-4.0`, Quelle „eigene Zeichnung“, `src/images/`, erzeugt vom Skript `.agents/skills/app-content/scripts/make_images.py` (nie die SVG von Hand ändern): `werkzeugkoffer-1` bis `werkzeugkoffer-5` (der Koffer füllt sich von Seite zu Seite: umschreiben 1, phrasal-verbs 3, false-friends 4, sprachvergleich 5; `wortfamilien` hat stattdessen `wortfamilie.svg`: Stamm help grün, Silben ful und less orange). `alt` sagt, was das Bild zeigt, nie die Lösung. Schrift mindestens 16 im 480er viewBox.
 - Poster sind `table`-Blöcke: „Klassenzimmer-Poster · Werkzeugkarte …“. Wörter stehen im Vokabelblock der Seite, nicht in einer Tabelle.
 
 ## Sources
@@ -67,7 +69,12 @@ Karte `https://lernapps.net/apps/map/englisch.json`; Grundwortschatz `https://le
 
 ### Wörter außerhalb des Grundwortschatzes
 
-(Wird mit den Seiten ergänzt; nur Wörter, die vorkommen.)
+Jedes steht auf der Seite mit Bedeutung (Vokabelblock, Merke oder Rückmeldung der Übung):
+- `umschreiben`: rubber (Radiergummi, britisch), caretaker (Hausmeister), pencil (A2).
+- `wortfamilien`: careless (Vokabelblock), hopeless, homeless, hopeful (abgeleitet aus Stamm und Silbe, in den Rückmeldungen erklärt), colourful, helpful, useful, useless (A2 der Liste).
+- `phrasal-verbs`: host family, fill in, hand in, set off (Vokabelblock); die Verben give up, look after, find out, take off, pick up, turn off, put on, stand up, grow up, sit down, put away (Karte, Zuordnung und Rückmeldungen).
+- `false-friends`: become, chef, sensible, eventually, actual, gift (Vokabelblock „Warnschilder“), current, poison, sensitive, boss (Warnschild-Spalte), eventual (nur als Distraktor mit Meldung).
+- `sprachvergleich`: main clause, subordinate clause, compound (Vokabelblock), closed compound, Germanic (im Sachtext), homework, school bus (Übung), thirsty (A1).
 
 ## Adding a chapter or round
 
@@ -78,6 +85,13 @@ Karte `https://lernapps.net/apps/map/englisch.json`; Grundwortschatz `https://le
 5. `npx --no -- lernapps check`; committen.
 
 ## Rules learned from mistakes
+
+Aus dem Lerner-Check der Musterseite `umschreiben`:
+- Eine Karte, die mehrere Wege kennt, nennt sie „Weg A“ und „Weg B“, nicht „Schritt 1, 2, 3“ (Schritte sind eine Reihenfolge).
+- Auswahlaufgaben: die richtige Antwort steht nicht immer an erster Stelle und ist nicht immer die längste.
+- Englisch im Chat mit Kurzformen (don't), kein Wort außerhalb von A1/A2 ohne Erklärung; vor der ersten Aufgabe steht „Das kannst du danach“.
+- Übungen vom Leichten zum Schweren: Ordnen vor Übersetzen; bei `write` gleichwertige Antworten als `(a|b)` und `(you use to cut|cuts)` zulassen.
+- Das Koffer-Bild lässt unter dem Koffer Platz, damit die Lizenzplakette kein Fach verdeckt.
 
 Aus der Reihe (Konventionen lernapps/apps#489, Abschnitte 7 und 8):
 - Jede Übung fragt nur Wörter ab, die vorher auf der Seite stehen; eine Tabelle, die eine Übung beantwortet, steht nicht direkt darüber.
