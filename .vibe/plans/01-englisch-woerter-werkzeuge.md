@@ -200,7 +200,7 @@ Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/
 - [x] Seite das-brauchst-du (Kapitel 2, recap praepositionen-ort)
 - [x] Seite phrasal-verbs (Sachfall, Teilchen zuordnen, Pronomenstellung, Übungen)
 - [x] Seite false-friends (Fall mit Übersetzung, Warnschild, Übungen)
-- [ ] Seite sprachvergleich (Regeln ableiten, eigene Vergleichsregel, Rückblick)
+- [x] Seite sprachvergleich (Regeln ableiten, eigene Vergleichsregel, Rückblick)
 - [ ] Prüfung Wortbelege: Skript über alle Seiten (keine Lösung im Text darüber, Wörter vorher eingeführt, Fakten mit Quelle), Inhaltsführer mit Quellen und Wörterliste
 <!-- tasks: pages (7 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
