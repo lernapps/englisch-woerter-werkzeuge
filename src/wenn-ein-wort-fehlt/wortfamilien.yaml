@@ -82,11 +82,11 @@ blocks:
         id: wortfamilien-zerlegen
         languages: { source: de, target: en }
         mode: table
-        task: Zerlege die Wörter in Stamm und Silbe.
+        task: Zerlege die Wörter in Stamm und Vor- oder Nachsilbe.
         form: { case: hint, punctuation: ok }
         table:
           caption: Wörter zerlegen
-          header: [Wort, Stamm, Silbe]
+          header: [Wort, Stamm, Vor- oder Nachsilbe]
           rows:
             - [hopeless, "[hope]", "[(-|)less]"]
             - [colourful, "[colour]", "[(-|)ful]"]
@@ -95,18 +95,18 @@ blocks:
         hint: Die Silbe steht am Anfang oder am Ende des Wortes. Der Rest ist der Stamm.
       - type: matching
         id: wortfamilien-silben
-        text: Ordne jeder Silbe ihre Bedeutung zu.
+        text: Ordne jeder Vor- oder Nachsilbe ihre Bedeutung zu.
         pairs:
           - { left: "-ful", right: voller }
           - { left: "-less", right: ohne }
           - { left: "un-", right: nicht }
           - { left: "-er", right: "Person, die etwas tut" }
-        explanation: Eine Silbe hat immer dieselbe Bedeutung, auch bei neuen Wörtern.
+        explanation: Eine Vor- oder Nachsilbe hat meistens dieselbe Bedeutung, auch bei neuen Wörtern.
       - type: language-task
         id: wortfamilien-bilden
         languages: { source: de, target: en }
         mode: gap
-        task: Bilde das Wort. Ergänze die fehlende Silbe.
+        task: Bilde das Wort. Ergänze die fehlende Vor- oder Nachsilbe.
         form: { case: hint, punctuation: ok }
         items:
           - cue: full of colour
@@ -125,9 +125,9 @@ blocks:
               - answer: Peter is happyless.
                 message: Das Gegenteil mit nicht bildest du mit der Vorsilbe un- vor dem Stamm.
           - cue: a person who works
-            target: A [work]er is a person.
+            target: A work[er] is a person who works.
             mistakes:
-              - answer: A workful is a person.
+              - answer: A workful is a person who works.
                 message: Die Person, die etwas tut, endet auf -er.
         hint: Frage dich bei jeder Aufgabe, was die Silbe ändert.
       - type: single-choice
@@ -142,13 +142,13 @@ blocks:
             info: home ist der Stamm, -less heißt ohne.
           - text: Der Hamster hat ein schönes Zuhause.
             correct: false
-            info: Das wäre voller, also -ful, und nicht -less.
+            info: -less heißt ohne, nicht schön. Mit -ful würde es voller heißen, aber homeful gibt es nicht.
         explanation: homeless heißt ohne Zuhause.
       - type: language-task
         id: wortfamilien-schreiben
         languages: { source: de, target: en }
         mode: write
-        task: Bilde das englische Wort aus Stamm und Silbe.
+        task: Bilde das englische Wort aus Stamm und Vor- oder Nachsilbe.
         form: { case: hint, punctuation: ok }
         items:
           - source: nützlich (voller Nutzen)
@@ -158,7 +158,7 @@ blocks:
                 message: Die Nachsilbe -ful hat nur ein l.
               - answer: useless
                 message: useless heißt nutzlos. Gesucht ist nützlich.
-          - source: unordentlich (nicht tidy)
+          - source: unordentlich (nicht ordentlich)
             target: untidy
             mistakes:
               - answer: tidyless
@@ -184,7 +184,7 @@ blocks:
           - text: Ganze Sätze mit Punkt.
             kind: form
         solution: |
-          Ein Beispiel: A player is a person who plays games. The dog is playful. It plays with a ball all day.
+          Ein Beispiel: A player is a person who plays games. The dog is playful.
   - type: section
     id: weiter
     title: Wie es weitergeht

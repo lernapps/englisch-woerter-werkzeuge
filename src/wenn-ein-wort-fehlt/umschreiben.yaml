@@ -16,7 +16,7 @@ blocks:
 
           **(2) Ellie:** Can you tell me what it is? Then I can help.
 
-          **(3) Sophie:** It's a thing which you use to take away pencil lines.
+          **(3) Sophie:** It's a thing which you use to get rid of pencil lines.
 
           **(4) Ellie:** Ah, a rubber! They are next to the pencils.
 
@@ -36,13 +36,15 @@ blocks:
             note: So sagt man es in Großbritannien.
           - target: caretaker
             source: der Hausmeister
+          - target: get rid of
+            source: loswerden, entfernen
       - type: single-choice
         id: umschreiben-start
         text: Was tut Sophie in Zeile (3), als ihr das Wort fehlt?
         options:
           - text: Sie schreibt das Wort auf Deutsch.
             correct: false
-            info: Ellie würde das Wort nicht verstehen.
+            info: Ellie kann kein Deutsch, und Sophie will Englisch sprechen.
           - text: Sie sagt, wofür man die Sache braucht.
             correct: true
             info: Sie beschreibt die Sache, und Ellie errät das Wort.
@@ -59,7 +61,7 @@ blocks:
       - type: figure
         image: images/werkzeugkoffer-1.svg
         alt: Ein Werkzeugkoffer mit fünf Fächern. Das erste Fach ist gefüllt und heißt Umschreiben, die anderen vier sind noch leer.
-        caption: Der Werkzeugkoffer hat erst ein Werkzeug.
+        caption: Der Koffer hat erst ein Werkzeug.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: table
@@ -68,7 +70,7 @@ blocks:
         rows:
           - [
               "A",
-              "Sag mit einem Relativsatz, was es ist und was es tut. Für eine Sache nimmst du which oder that, für eine Person who.",
+              "Sag mit einem Relativsatz, was es ist und was es tut. Für eine Sache nimmst du which oder that, für eine Person who oder that.",
               "a thing which you wear on your head · a person who works in a hospital",
             ]
           - [
@@ -81,7 +83,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Weg B klappt, wenn es zu dem Wort genau ein Gegenteil gibt. Ein Wort wie **very** vor dem Wort macht etwas anderes daraus.
+              Weg B klappt, wenn es zu dem Wort genau ein Gegenteil gibt. Setze **not** direkt vor das Gegenteil. Mit **very** oder **a bit** davor sagt der Satz etwas anderes.
   - type: section
     id: uebung
     title: Übung
@@ -109,12 +111,12 @@ blocks:
         items:
           - cue: She is a person who plays games for a team.
             target: She is a [player].
-            distractors: [[singer, reader]]
+            distractors: [[singer, teacher]]
             mistakes:
               - answer: She is a singer.
                 message: Ein singer singt. Die Person spielt.
-              - answer: She is a reader.
-                message: Ein reader liest. Die Person spielt.
+              - answer: She is a teacher.
+                message: Ein teacher unterrichtet. Die Person spielt.
           - cue: It is a thing which you use to draw straight lines. It has numbers on it.
             target: It is a [ruler].
             distractors: [[pencil, rubber]]
@@ -143,19 +145,19 @@ blocks:
         form: { case: hint, punctuation: ok }
         items:
           - source: Ein Messer ist eine Sache, mit der man Brot schneidet.
-            target: A knife is a thing (which|that) (you use to cut|cuts) bread.
+            target: A knife is a thing (which|that) (you use to cut bread|you cut bread with|cuts bread).
             mistakes:
               - answer: A knife is a thing who you use to cut bread.
                 message: Für eine Sache nimmst du which oder that, nicht who.
           - source: Eine Lehrerin ist eine Person, die Kinder in der Schule unterrichtet.
-            target: A teacher is a person (who|that) teaches children at school.
+            target: A teacher is a person (who|that) teaches (children|kids|pupils|students) at school.
             mistakes:
               - answer: A teacher is a person which teaches children at school.
                 message: Für eine Person nimmst du who oder that, nicht which.
               - answer: A teacher is a person teaches children at school.
                 message: Dir fehlt who.
           - source: Ein Koch ist eine Person, die in der Küche Essen macht.
-            target: A cook is a person (who|that) (makes|prepares) food in the kitchen.
+            target: A cook is a person (who|that) (makes|prepares|cooks) food in the kitchen.
             mistakes:
               - answer: A cook is a person which makes food in the kitchen.
                 message: Für eine Person nimmst du who oder that, nicht which.

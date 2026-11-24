@@ -2,7 +2,7 @@
 title: "Werkzeug 5: Eigene Vergleichsregeln"
 description: "Ein kurzer Sachtext vergleicht Englisch und Deutsch. Du leitest aus Beispielen Vergleichsregeln ab und stellst eigene auf."
 competencies: [sprachvergleich]
-scope: "Die Seite stellt das Werkzeug Vergleichsregel vor. Lernende sammeln Beispielpaare in Deutsch und Englisch, suchen das gemeinsame Muster und prüfen die Regel an einem neuen Satz. Drei Bereiche werden verglichen. Wortstellung: Im deutschen Hauptsatz steht das Verb an zweiter Stelle, im deutschen Nebensatz am Ende, das Englische behält überwiegend die Reihenfolge Subjekt, Verb, Objekt. Wortbildung: Deutsch fügt Wörter oft zu einem langen Wort zusammen, Englisch schreibt Zusammensetzungen oft getrennt (school bus), manchmal zusammen (homework). Ausdruck: Wo das Deutsche haben und ein Nomen benutzt (ich habe Durst), benutzt das Englische be und ein Adjektiv (I am thirsty). Quellen für Wortstellung und Wortbildung sind Wikipedia, V2 word order und Compound (linguistics)."
+scope: "Die Seite stellt das Werkzeug Vergleichsregel vor. Lernende sammeln Beispielpaare in Deutsch und Englisch, suchen das gemeinsame Muster und prüfen die Regel an einem neuen Satz. Drei Bereiche werden verglichen. Wortstellung: Im deutschen Hauptsatz steht das Verb an zweiter Stelle, im deutschen Nebensatz am Ende, das Englische behält überwiegend die Reihenfolge Subjekt, Verb, Objekt. Wortbildung: Deutsch fügt Wörter oft zu einem langen Wort zusammen, Englisch schreibt Zusammensetzungen oft getrennt (school bus), manchmal zusammen (homework). Ausdruck: Bei manchen Wörtern benutzt das Deutsche haben und ein Nomen (ich habe Durst), das Englische be und ein Adjektiv (I am thirsty). Quellen für Wortstellung und Wortbildung sind Wikipedia, V2 word order und Compound (linguistics)."
 blocks:
   - type: section
     id: einstieg
@@ -39,7 +39,7 @@ blocks:
         id: sprachvergleich-start
         text: Was sagt der Text über die Wortstellung im Englischen?
         options:
-          - text: Das Verb steht immer am Satzende.
+          - text: Das Verb steht immer am Ende des Satzes.
             correct: false
             info: Das gilt für den deutschen Nebensatz, nicht für das Englische.
           - text: Die Reihenfolge Subjekt, Verb, Objekt bleibt meistens gleich.
@@ -47,7 +47,7 @@ blocks:
             info: Der Text sagt, dass Englisch diese Reihenfolge beibehält, auch im Nebensatz.
           - text: Das Verb steht immer an zweiter Stelle wie im Deutschen.
             correct: false
-            info: Im Deutschen steht das Verb im Hauptsatz an zweiter Stelle, im Englischen bleibt die Reihenfolge fest.
+            info: Im Deutschen steht das Verb im Hauptsatz an zweiter Stelle, im Englischen bleibt die Reihenfolge meistens gleich.
         explanation: Das Englische hält die Reihenfolge Subjekt, Verb, Objekt meistens ein.
   - type: section
     id: werkzeug
@@ -63,7 +63,7 @@ blocks:
         caption: "Klassenzimmer-Poster · Werkzeugkarte „Wie vergleiche ich zwei Sprachen?“"
         header: [Schritt, Was du tust]
         rows:
-          - ["1", "Sammle drei Beispielpaare: ein deutscher und ein englischer Satz mit derselben Bedeutung."]
+          - ["1", "Sammle zwei bis drei Beispielpaare: ein deutscher und ein englischer Satz mit derselben Bedeutung."]
           - ["2", "Suche, was in allen Paaren gleich ist, und schreibe es in einem Satz auf: Das ist deine Regel."]
           - ["3", "Prüfe die Regel an einem neuen Satz. Passt sie nicht, ändere sie."]
       - type: note
@@ -109,10 +109,10 @@ blocks:
             mistakes:
               - answer: On Monday bought Sophie a book.
                 message: Im Englischen steht das Subjekt vor dem Verb, auch nach einer Zeitangabe am Anfang.
-        hint: Das Subjekt steht im Englischen immer vor dem Verb.
+        hint: In englischen Aussagesätzen steht das Subjekt vor dem Verb.
       - type: ordering
         id: sprachvergleich-reihenfolge
-        text: Bringe die Teile in die richtige Reihenfolge. Der Nebensatz im Englischen hat dieselbe Reihenfolge wie der Hauptsatz.
+        text: Bringe die Teile in die richtige Reihenfolge. Der Hauptsatz kommt zuerst. Der Nebensatz im Englischen hat dieselbe Reihenfolge wie der Hauptsatz.
         items:
           - he stays at home
           - because
@@ -168,7 +168,7 @@ blocks:
           - text: Es gibt mindestens zwei Beispielpaare mit deutschem und englischem Satz.
             source: /englisch-und-deutsch/sprachvergleich/#einstieg
         solution: |
-          Ein Beispiel: Beim Ausdruck sagt man bei Gefühlen im Deutschen oft haben und ein Nomen, im Englischen be und ein Adjektiv. Ich habe Angst heißt I am afraid. Ich habe Recht heißt I am right.
+          Ein Beispiel: Beim Ausdruck sagt man bei manchen Wörtern im Deutschen haben und ein Nomen, im Englischen be und ein Adjektiv. Ich habe Angst heißt I am afraid. Ich habe Recht heißt I am right.
   - type: section
     id: weiter
     title: Rückblick auf den Koffer

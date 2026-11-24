@@ -46,11 +46,11 @@ blocks:
             info: In Zeile (2) steht hand it in at the school office.
           - text: Er soll es zu Hause lassen.
             correct: false
-            info: Das Formular geht ins Schulbüro, nicht in die Gastfamilie.
+            info: Das Blatt sagt, dass man es im Schulbüro abgibt, nicht dass man es zu Hause lässt.
           - text: Er soll es der Gastfamilie geben.
             correct: false
             info: "In Zeile (2) steht, dass man es im Schulbüro abgibt, nicht bei der Familie."
-        explanation: Ausgefüllt wird das Formular schon vorher, abgegeben wird es im Büro.
+        explanation: Das Formular wird ausgefüllt und am ersten Tag im Schulbüro abgegeben.
   - type: section
     id: werkzeug
     title: Die Werkzeugkarte Teilchen
@@ -73,7 +73,7 @@ blocks:
           - ["2", "Prüfe den Sinn im Satz oder im Wörterbuch.", "sit down: sich hinsetzen"]
           - [
               "3",
-              "Ein Pronomen steht vor dem Teilchen. Ein Nomen steht davor oder dahinter.",
+              "Bei Verben, die man trennen kann: Ein Pronomen steht vor dem Teilchen, ein Nomen davor oder dahinter.",
               "put it away · put away the toys · put the toys away",
             ]
       - type: note
@@ -81,7 +81,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Das Teilchen ändert den Sinn des Verbs oft ganz. Verb und Teilchen bleiben eine Einheit, auch wenn bei einem Nomen das Objekt dazwischen steht.
+              Das Teilchen ändert den Sinn des Verbs oft ganz. Verb und Teilchen bleiben eine Einheit. Nicht jedes Verb mit Teilchen lässt sich trennen: Bei manchen steht das Teilchen immer direkt hinter dem Verb.
   - type: section
     id: uebung
     title: Übung
@@ -154,7 +154,7 @@ blocks:
             info: Das Pronomen it steht zwischen turn und off.
           - text: Please off turn it.
             correct: false
-            info: Das Teilchen steht nie vor dem Verb.
+            info: In diesem Satz steht das Teilchen nicht vor dem Verb.
         explanation: Bei einem Pronomen steht das Teilchen nach dem Objekt.
       - type: language-task
         id: phrasal-verbs-schreiben
@@ -164,19 +164,19 @@ blocks:
         form: { case: hint, punctuation: ok }
         items:
           - source: Gib nicht auf!
-            target: Don't give up!
+            target: (Don't|Do not) give up!
             mistakes:
               - answer: Don't give!
                 message: give allein heißt geben. Erst give up heißt aufgeben.
               - answer: Don't up give!
                 message: Das Teilchen steht hinter dem Verb.
           - source: Er kümmert sich um den Hund.
-            target: He looks after the dog.
+            target: He (looks after|takes care of) the dog.
             mistakes:
               - answer: He looks the dog after.
-                message: Bei look after steht das Teilchen direkt hinter dem Verb, weil after hier zu look gehört.
+                message: Bei look after steht das Teilchen direkt hinter dem Verb.
           - source: Wir ziehen unsere Jacken an.
-            target: We (put on our jackets|put our jackets on).
+            target: We (put on our jackets|put our jackets on|are putting on our jackets|are putting our jackets on).
             mistakes:
               - answer: We put to our jackets.
                 message: Das Teilchen heißt on. to ist hier falsch.
@@ -187,7 +187,7 @@ blocks:
     blocks:
       - type: open-task
         id: phrasal-verbs-selbst
-        task: Wähle eine Regel des Infoblatts, die du sinnvoll oder nicht sinnvoll findest. Schreibe in zwei bis drei Sätzen deine Meinung und benutze dabei ein Verb mit Teilchen.
+        task: Wähle eine Regel des Infoblatts, die du sinnvoll oder nicht sinnvoll findest. Schreibe in zwei bis drei englischen Sätzen deine Meinung und benutze dabei ein Verb mit Teilchen.
         points:
           - text: Der Text nennt eine Regel des Blatts und sagt, ob sie sinnvoll ist.
             source: /englisch-und-deutsch/phrasal-verbs/#einstieg

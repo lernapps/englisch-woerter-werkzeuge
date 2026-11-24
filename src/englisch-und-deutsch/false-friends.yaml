@@ -37,7 +37,7 @@ blocks:
         options:
           - text: Zeile (1)
             correct: false
-            info: become heißt nicht bekommen. Das Programm hat das Wort nur deshalb gewählt, weil es wie das deutsche aussieht.
+            info: become heißt nicht bekommen. Das Programm hat wohl Wort für Wort übersetzt.
           - text: Zeile (4)
             correct: true
             info: gift heißt Geschenk. Hier passt das Wort.
@@ -80,7 +80,7 @@ blocks:
             source: vernünftig
             falseFriend: nicht sensibel (das ist sensitive)
           - target: eventually
-            source: schließlich
+            source: schließlich, am Ende
             falseFriend: nicht eventuell (das ist maybe oder possibly)
           - target: actual
             source: tatsächlich
@@ -93,7 +93,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Ein false friend ist ein Wort, das einem Wort in einer anderen Sprache ähnelt und etwas anderes bedeutet. Den Namen gibt es seit einem französischen Buch von 1928 (Les Faux Amis).
+              Ein false friend ist ein Wort, das einem Wort in einer anderen Sprache ähnelt und etwas anderes bedeutet. Der Begriff wurde durch ein französisches Buch von 1928 eingeführt (Les Faux Amis).
   - type: section
     id: uebung
     title: Übung
@@ -112,7 +112,7 @@ blocks:
               - answer: This is my actual plan.
                 message: actual heißt tatsächlich, nicht aktuell.
               - answer: This is my eventual plan.
-                message: eventual heißt schließlich, nicht aktuell.
+                message: eventual heißt letztendlich, nicht aktuell.
           - source: Das ist die tatsächliche Zahl.
             target: This is the [actual] number.
             distractors: [[current, eventual]]
@@ -120,7 +120,7 @@ blocks:
               - answer: This is the current number.
                 message: current heißt aktuell. Hier ist tatsächlich gemeint.
               - answer: This is the eventual number.
-                message: eventual heißt schließlich.
+                message: eventual heißt letztendlich.
         hint: Prüfe, welche deutsche Bedeutung in den Satz passt.
       - type: language-task
         id: false-friends-schreiben
@@ -130,7 +130,7 @@ blocks:
         form: { case: hint, punctuation: ok }
         items:
           - source: Ich bekomme morgen einen Brief.
-            target: I (get|am getting|will get|receive|will receive) a letter tomorrow.
+            target: (I'm getting|I am getting|I'll get|I will get|I'm going to get|I'll receive|I will receive|I'm going to receive|I'm receiving|I am receiving) a letter tomorrow.
             mistakes:
               - answer: I become a letter tomorrow.
                 message: become heißt werden. Für bekommen nimmst du get oder receive.
@@ -140,7 +140,7 @@ blocks:
               - answer: My father is the chef of a small shop.
                 message: chef heißt Koch. Ein Chef ist ein boss.
           - source: Vielleicht komme ich später.
-            target: (Maybe I come|Maybe I will come|Maybe I'll come|I may come|I might come) later.
+            target: (Maybe I'll come|Maybe I will come|Maybe I'm coming|Perhaps I'll come|Perhaps I will come|I may come|I might come) later.
             mistakes:
               - answer: Eventually I come later.
                 message: eventually heißt schließlich, nicht vielleicht.
