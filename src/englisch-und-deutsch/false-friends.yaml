@@ -1,0 +1,188 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Werkzeug 4: Das Warnschild für false friends"
+description: "Ein Programm übersetzt eine Café-Mail mit Fehlern. Du lernst, false friends am Warnschild zu erkennen."
+competencies: [false-friends]
+scope: "Die Seite stellt das Werkzeug Warnschild vor. False friends sind Wörter, die einem Wort in einer anderen Sprache ähneln, aber etwas anderes bedeuten. Beispiele sind become (werden, nicht bekommen), chef (Koch, nicht Chef), sensible (vernünftig, nicht sensibel), eventually (schließlich, nicht eventuell), actual (tatsächlich, nicht aktuell) und gift (Geschenk, nicht Gift). Gift auf Deutsch heißt auf Englisch poison. Nicht hier, weil es spätere Seiten sind: phrasal verbs und der Sprachvergleich."
+blocks:
+  - type: section
+    id: einstieg
+    title: Eine Mail mit Übersetzungsfehlern
+    blocks:
+      - type: text
+        text: "Ein Café hat seine Mail an die Gäste mit einem Übersetzungsprogramm ins Englische übersetzt. Sophie prüft den Text. Unter jedem deutschen Satz steht, was das Programm daraus gemacht hat. **Das kannst du danach:** Du erkennst Wörter, die wie deutsche aussehen und etwas anderes bedeuten, und benutzt das richtige englische Wort."
+      - type: text
+        text: |
+          **(1) Original:** Ab Montag bekommen Sie zu jedem Kuchen einen Kaffee gratis.
+
+          **Programm:** From Monday you become a free coffee with every cake.
+
+          **(2) Original:** Der Chef des Cafés begrüßt Sie persönlich.
+
+          **Programm:** The chef of the café greets you personally.
+
+          **(3) Original:** Unsere Bedienung ist sehr sensibel.
+
+          **Programm:** Our waiter is very sensible.
+
+          **(4) Original:** Für unsere Stammgäste gibt es ein kleines Geschenk.
+
+          **Programm:** There is a small gift for our regular guests.
+
+          **(5) Original:** Sie bekommen die neue Karte eventuell schon heute.
+
+          **Programm:** You will eventually get the new menu today.
+      - type: single-choice
+        id: false-friends-start
+        text: Welche Zeile der Übersetzung stimmt mit dem Original überein?
+        options:
+          - text: Zeile (1)
+            correct: false
+            info: become heißt nicht bekommen. Das Programm hat das Wort nur deshalb gewählt, weil es wie das deutsche aussieht.
+          - text: Zeile (4)
+            correct: true
+            info: gift heißt Geschenk. Hier passt das Wort.
+          - text: Zeile (5)
+            correct: false
+            info: eventually heißt nicht eventuell. Das Programm hat den Sinn des Satzes verändert.
+        explanation: In Zeile (4) hat das Programm das richtige Wort genommen. In den anderen Zeilen steht ein Wort, das wie ein deutsches aussieht.
+  - type: section
+    id: werkzeug
+    title: Die Werkzeugkarte Warnschild
+    blocks:
+      - type: figure
+        image: images/werkzeugkoffer-4.svg
+        alt: Ein Werkzeugkoffer mit fünf Fächern. Die ersten vier Fächer sind gefüllt und heißen Umschreiben, Wortfamilie, Teilchen und Warnschild, das fünfte ist noch leer.
+        caption: Der Koffer hat jetzt vier Werkzeuge.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: "Klassenzimmer-Poster · Werkzeugkarte „Was tun bei einem Wort, das aussieht wie ein deutsches?“"
+        header: [Schritt, Was du tust, Beispiel]
+        rows:
+          - [
+              "1",
+              "Halte an, wenn ein englisches Wort wie ein deutsches aussieht. Das ist das Warnschild.",
+              "art sieht aus wie Art",
+            ]
+          - ["2", "Frage, ob die deutsche Bedeutung in den Satz passt.", "art heißt Kunst, nicht Art"]
+          - ["3", "Prüfe im Wörterbuch und merke dir das Paar.", "art ≠ Art"]
+      - type: vocabulary
+        caption: Warnschilder
+        languages: { source: de, target: en }
+        entries:
+          - target: become
+            source: werden
+            falseFriend: nicht bekommen (das ist get oder receive)
+          - target: chef
+            source: der Koch
+            falseFriend: nicht Chef (das ist boss)
+          - target: sensible
+            source: vernünftig
+            falseFriend: nicht sensibel (das ist sensitive)
+          - target: eventually
+            source: schließlich
+            falseFriend: nicht eventuell (das ist maybe oder possibly)
+          - target: actual
+            source: tatsächlich
+            falseFriend: nicht aktuell (das ist current)
+          - target: gift
+            source: das Geschenk
+            falseFriend: nicht Gift (das ist poison)
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Ein false friend ist ein Wort, das einem Wort in einer anderen Sprache ähnelt und etwas anderes bedeutet. Den Namen gibt es seit einem französischen Buch von 1928 (Les Faux Amis).
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: language-task
+        id: false-friends-wort
+        languages: { source: de, target: en }
+        mode: choice
+        task: Wähle das richtige englische Wort.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Das ist mein aktueller Plan.
+            target: This is my [current] plan.
+            distractors: [[actual, eventual]]
+            mistakes:
+              - answer: This is my actual plan.
+                message: actual heißt tatsächlich, nicht aktuell.
+              - answer: This is my eventual plan.
+                message: eventual heißt schließlich, nicht aktuell.
+          - source: Das ist die tatsächliche Zahl.
+            target: This is the [actual] number.
+            distractors: [[current, eventual]]
+            mistakes:
+              - answer: This is the current number.
+                message: current heißt aktuell. Hier ist tatsächlich gemeint.
+              - answer: This is the eventual number.
+                message: eventual heißt schließlich.
+        hint: Prüfe, welche deutsche Bedeutung in den Satz passt.
+      - type: language-task
+        id: false-friends-schreiben
+        languages: { source: de, target: en }
+        mode: write
+        task: Schreibe den Satz auf Englisch.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Ich bekomme morgen einen Brief.
+            target: I (get|am getting|will get|receive|will receive) a letter tomorrow.
+            mistakes:
+              - answer: I become a letter tomorrow.
+                message: become heißt werden. Für bekommen nimmst du get oder receive.
+          - source: Mein Vater ist Chef eines kleinen Ladens.
+            target: My father is the (boss|owner|manager) of a small shop.
+            mistakes:
+              - answer: My father is the chef of a small shop.
+                message: chef heißt Koch. Ein Chef ist ein boss.
+          - source: Vielleicht komme ich später.
+            target: (Maybe I come|Maybe I will come|Maybe I'll come|I may come|I might come) later.
+            mistakes:
+              - answer: Eventually I come later.
+                message: eventually heißt schließlich, nicht vielleicht.
+        hint: Frage dich, ob das ähnliche Wort wirklich dasselbe bedeutet.
+      - type: single-choice
+        id: false-friends-gift
+        text: "Der Hund hat Gift gefressen. Welcher englische Satz stimmt?"
+        options:
+          - text: The dog ate gift.
+            correct: false
+            info: gift heißt Geschenk, nicht Gift.
+          - text: The dog ate a gift.
+            correct: false
+            info: a gift ist ein Geschenk. Der Satz sagt etwas anderes.
+          - text: The dog ate poison.
+            correct: true
+            info: poison heißt Gift.
+        explanation: Das deutsche Gift heißt auf Englisch poison. Das englische gift ist ein Geschenk.
+      - type: true-false
+        id: false-friends-sensible
+        text: "Der englische Satz „My brother is very sensible.“ heißt auf Deutsch: Mein Bruder ist sehr sensibel."
+        answer: false
+        explanation: sensible heißt vernünftig. Für sensibel sagst du sensitive.
+  - type: section
+    id: anwenden
+    title: Selbst entscheiden
+    blocks:
+      - type: open-task
+        id: false-friends-selbst
+        task: Soll das Café die Übersetzung so verschicken? Entscheide dich und begründe es in zwei bis vier Sätzen auf Deutsch. Nenne mindestens zwei Zeilen und sage, was dort richtig wäre.
+        points:
+          - text: Der Text sagt klar, ob die Übersetzung so verschickt werden soll (nein).
+            kind: form
+          - text: Der Text nennt mindestens zwei fehlerhafte Zeilen mit ihrem Fehler, zum Beispiel become statt get.
+            source: /englisch-und-deutsch/false-friends/#einstieg
+          - text: Der Text sagt, welches Wort an die Stelle gehört.
+            source: /englisch-und-deutsch/false-friends/#werkzeug
+        solution: |
+          Nein, die Mail sollte so nicht verschickt werden. In Zeile (1) steht become, aber gemeint ist bekommen. Dort gehört get hin. In Zeile (3) steht sensible, das heißt vernünftig. Gemeint ist sensitive.
+  - type: section
+    id: weiter
+    title: Wie es weitergeht
+    blocks:
+      - type: text
+        text: Das vierte Werkzeug liegt im Koffer. Auf der letzten Seite stellst du eigene Regeln auf, wie sich Englisch und Deutsch unterscheiden.
