@@ -1,10 +1,13 @@
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 format: 2
-# The strand of the learning map the app stays in, <subject>/<strand> (e.g. mathematik/stochastik); then each page
-# names its competencies. none: the app is on no strand, and no page names competencies. A unit app across the strands
-# of a subject whose map allows it names subject: <subject> (e.g. franzoesisch) instead of strand.
-strand: none
-title: Platzhalter
-intro: Dieses Kapitel hält den Platz frei, bis der geplante Inhalt da ist.
+strand: englisch/wortschatz
+title: Werkzeuge für Wörter
+intro: In Mr Hills Klassenchat helfen sich Sophie, Ellie und Amir, wenn ihnen ein Wort fehlt. Du füllst den Werkzeugkoffer für Wörter. Erst umschreibst du ein fehlendes Wort und erschließt ein unbekanntes über seine Wortfamilie. Dann vergleichst du Englisch mit Deutsch, mit phrasal verbs und false friends.
 languages: [de]
-chapters: [thema]
+scope:
+  text: "Die App zeigt, was Lernende tun können, wenn ihnen ein englisches Wort fehlt oder sie eines nicht kennen, und wo Englisch und Deutsch sich ähnlich oder täuschend verschieden sind. Jedes Werkzeug ist eine Karte im Werkzeugkoffer mit der Frage „Was tun, wenn …?“ und einem kurzen Vorgehen. Kapitel 1 umfasst das Umschreiben (a thing which …, a person who …, ein Gegenteil mit not) und die Wortfamilie (Stamm, Vorsilbe, Nachsilbe: help, helpful, helpless). Kapitel 2 umfasst phrasal verbs (Verb plus Teilchen, das den Sinn ändert, zum Beispiel give up), false friends (Wörter, die wie deutsche aussehen und etwas anderes bedeuten, zum Beispiel become und bekommen) und den Vergleich von Wortbildung, Wortstellung und Ausdruck in Englisch und Deutsch."
+  out:
+    - Wortfelder zu Situationen (stehen in den Situations-Explainern)
+    - Die Fachbegriffe noun und verb (stehen in Hello, Millbrook!)
+    - Lautschrift und Aussprache (steht in Klang und Schrift)
+chapters: [wenn-ein-wort-fehlt]
