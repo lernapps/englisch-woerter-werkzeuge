@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -42,7 +42,7 @@ Die Lernenden bauen sich einen Werkzeugkoffer für Wörter: Sie umschreiben ein 
 - Wiederholung: Kapitel 1 Sammel-Wiederholung `relativsaetze` (englisch-saetze-verbinden) und `grammatik-fachbegriffe` (hello-millbrook); Kapitel 2 Wiederholung `praepositionen-ort` (englisch-dinge-mengen-orte).
 - Didaktik: Der Werkzeugkoffer wächst. Jede Seite stellt ein Werkzeug als Karte „Was tun, wenn …?“ mit kurzem Vorgehen vor; Lesestück (Chat, Stufe 7-8; Sachfall, Stufe 9-10), Übungen an echten Stolpersteinen.
 - Umfang: 2 Kapitel, 5 Seiten Inhalt plus 2 Wiederholungsseiten, je Seite höchstens etwa 25 Items. Ausgeschlossen: Wortfelder (Situations-Explainer), Lautschrift (#482), Fachbegriffe noun und verb (#470).
-- Quellen (nur Fakten, geöffnet am 2026-11-24): en.wikipedia.org „False friend“ (Definition, gift/Gift, Herkunft des Begriffs), „English phrasal verbs“ (Verb plus Teilchen, Sinn nicht aus den Teilen ableitbar, Stellung des Pronomens), „Affix“ (Vor- und Nachsilben). Keine Sätze übernommen. Nicht geprüft: Häufigkeit einzelner phrasal verbs.
+- Quellen (nur Fakten, geöffnet am 2026-11-24): en.wikipedia.org „False friend“ (Definition, gift/Gift, Herkunft des Begriffs), „English phrasal verbs“ (Verb plus Teilchen, Sinn nicht aus den Teilen ableitbar, Stellung des Pronomens), „Affix“ (Vor- und Nachsilben). Keine Sätze übernommen. en.wikipedia „V2 word order“ (Deutsch: Verb an zweiter Stelle im Hauptsatz, am Ende im Nebensatz; Englisch überwiegend Subjekt-Verb-Objekt) und „Compound (linguistics)“ (Zusammensetzungen, Deutsch bildet lange Wörter). Nicht geprüft und deshalb weggelassen: Häufigkeit einzelner phrasal verbs; es werden keine Häufigkeitsangaben gemacht.
 - Wie sie dorthin kommen (Fehlbild, das die Rückmeldung fängt):
   - `umschreiben`: Sie leiten aus einer Beschreibung (a person who …) das Wort ab und bauen selbst einen Relativsatz; Fehlbild: das Wort nennen statt es zu umschreiben, who/which vertauschen.
   - `wortfamilien`: Sie trennen Wörter in Stamm und Silben und bilden Wörter mit -ful/-less/un-/-er; Fehlbild: Stamm nicht erkannt, Bedeutung der Silbe vertauscht (helpful ≠ helpless).
@@ -95,9 +95,10 @@ Die Lernenden bauen sich einen Werkzeugkoffer für Wörter: Sie umschreiben ein 
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Orchestrator: Recherche bestätigt; Sophie nur als Name/Stimme eines Falls; plan-done-Folge ok; Aussagen zu phrasal verbs und Wortstellung aus offenen Quellen belegen sonst weglassen
 
 ### Answers
 
@@ -125,28 +126,43 @@ Die Antworten stehen im Auftrag (Issue lernapps/apps#485) und in der Startnachri
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
 
 ### Content method
 
-<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
-checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
-<!-- An explainer: per figure, model and component its learning action in two to four sentences
-(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
-page, which a link. -->
+Ein Werkzeugkoffer trägt den Explainer: Jede Seite stellt ein Werkzeug als Karte vor („Was tun, wenn …?“, drei kurze Schritte) als `table` „Klassenzimmer-Poster · Werkzeugkarte …“ plus `note` Merke. Seiten Stufe 7-8 (Kapitel 1): Lesestück als Chat (Sophie, Ellie, Amir, Mr Hill) in `text` mit Randglossar; Seiten Stufe 9-10 (Kapitel 2): sachlicher Fall mit Daten und Quelle, Sophie nur als Name der Nutzerin, keine Szene mit Kindern.
+Figuren, Orte und Wörter: keine Figuren-Einführung im Seitentext (keine Altersangaben, keine Familie, kein Datum); die Startseite nennt nur Namen und Rollen. Wörter mit Bedeutung im Vokabelblock der aktuellen app-templates (nicht als Tabelle).
+Quelle der Wörter: Grundwortschatz A1/A2; darüber auf der Seite erklärt und im Inhaltsführer gelistet. Kein Audio.
+
+Engagement je Seite (Eröffnung · Wechsel · Belohnung · Geschichte):
+- `umschreiben`: Eröffnung: ein Chat bricht ab („I can't say the word for …“), Auswahl, welche Umschreibung passt; Wechsel: Lesestück → Karte → Relativsatz bauen → Gegenteil/Synonym; Belohnung: Sophie versteht das Wort, Lernende umschreiben eigenes Wort (`open-task`); Geschichte: Chat mit Mr Hill, Ende: unbekanntes Wort im nächsten Chat.
+- `wortfamilien`: Eröffnung: ein unbekanntes Wort im Chat erraten; Wechsel: Wörter in Stamm und Silben zerlegen (`language-task` table), Bedeutung ableiten, Wörter bilden; Belohnung: Lernende erschließen drei neue Wörter selbst; Geschichte: Chat geht weiter.
+- `phrasal-verbs`: Eröffnung: give up wörtlich übersetzen lassen, Auswahl; Wechsel: Fall lesen (Haushaltsregeln/E-Mail), Verb+Teilchen zuordnen, Pronomen-Stellung, Sätze bilden; Belohnung: eigene Hausregeln mit phrasal verbs.
+- `false-friends`: Eröffnung: Warnschild-Frage (become ≠ bekommen); Wechsel: Fall (maschinell übersetzte Speisekarte/E-Mail), Auswahl, Übersetzen in beide Richtungen; Belohnung: Lernende korrigieren den Text und entscheiden.
+- `sprachvergleich`: Eröffnung: drei Satzpaare vergleichen; Wechsel: Regeln aus Beispielen ableiten (Wortbildung, Wortstellung, Ausdruck), Regel prüfen; Belohnung: eigene Vergleichsregel schreiben (`open-task`), Rückblick auf den Koffer.
+- Wiederholungsseiten `das-brauchst-du`: kurz, ohne neue Inhalte, höchstens zwei Prüffragen.
+
+Muster (Name · Kompetenz · Form):
+- Umschreiben ableiten · `umschreiben` · `language-task` mode `choice` (Beschreibung → Wort) und `write` (Relativsatz bauen, Varianten in `(a|b)`), `mistakes` je Fehler.
+- Zerlegen und bilden · `wortfamilien` · `language-task` mode `table` (Stamm, Silbe, Bedeutung) und `gap`; `matching` Silbe → Bedeutung.
+- Teilchen zuordnen · `phrasal-verbs` · `language-task` `choice`, `ordering` (He picks it up), `write` Übersetzung.
+- Warnschild · `false-friends` · `single-choice` mit Fall, `language-task` `write` beide Richtungen, `distractors` nur echte Fehler.
+- Regel ableiten · `sprachvergleich` · Auswahl der richtigen Regel mit Begründung, `open-task` eigene Regel.
+Daten: keine Datendatei; jedes Wort steht einmal im Vokabelblock der Seite. Bilder: nur wo es etwas zeigt (Werkzeugkoffer-Figur, Silbenleiste für wortfamilien); eigene SVGs. Komponenten: keine (`prefer-built-in-block`).
+Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/SKILL.md` mit Seitenaufbau, Mustern, Terminologie, Wörterliste, Quellen.
 
 ## Code
 
@@ -171,11 +187,19 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Muster: Kapitel 1, Seite umschreiben (Chat-Lesestück, Werkzeugkarte, Vokabelblock, mind. 4 Übungen) mit Kapitel- und Startseite; zeigt Chat, Karte, Relativsatz bauen
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Seite das-brauchst-du (Kapitel 1, recap relativsaetze, grammatik-fachbegriffe)
+- [ ] Seite wortfamilien (Chat, Silbenleiste, zerlegen und bilden, Übungen)
+- [ ] Seite das-brauchst-du (Kapitel 2, recap praepositionen-ort)
+- [ ] Seite phrasal-verbs (Sachfall, Teilchen zuordnen, Pronomenstellung, Übungen)
+- [ ] Seite false-friends (Fall mit Übersetzung, Warnschild, Übungen)
+- [ ] Seite sprachvergleich (Regeln ableiten, eigene Vergleichsregel, Rückblick)
+- [ ] Prüfung Wortbelege: Skript über alle Seiten (keine Lösung im Text darüber, Wörter vorher eingeführt, Fakten mit Quelle), Inhaltsführer mit Quellen und Wörterliste
+<!-- tasks: pages (7 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
