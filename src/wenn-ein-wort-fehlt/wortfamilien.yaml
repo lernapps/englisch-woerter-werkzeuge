@@ -1,0 +1,193 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Werkzeug 2: Ein unbekanntes Wort erschließen"
+description: "Im Klassenchat kennt Sophie ein Wort nicht. Du lernst, es über seine Wortfamilie zu erschließen."
+competencies: [wortfamilien]
+scope: "Die Seite stellt das Werkzeug Wortfamilie vor. Ein unbekanntes Wort wird in Vorsilbe, Stamm und Nachsilbe zerlegt. Der Stamm ist der Teil, den man schon kennt (help). Die Nachsilbe -ful heißt voller, -less heißt ohne, -er macht aus einem Verb die Person, die etwas tut (teach, teacher), und die Vorsilbe un- heißt nicht. So lassen sich helpful und helpless erschließen und neue Wörter bilden. Nicht hier, weil es spätere Seiten sind: phrasal verbs, false friends und der Sprachvergleich."
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Wort, das Sophie nicht kennt
+    blocks:
+      - type: text
+        text: "Im Chat steht ein Wort, das Sophie nicht kennt. Sie sucht es nicht gleich im Wörterbuch. Lies den Chat und achte darauf, was sie zuerst tut. **Das kannst du danach:** Du zerlegst ein unbekanntes Wort und erschließt seine Bedeutung. Du bildest auch selbst neue Wörter."
+      - type: text
+        text: |
+          **(1) Amir:** Peter was careless yesterday. He left his bag in the park.
+
+          **(2) Sophie:** Careless? I don't know this word.
+
+          **(3) Mr Hill:** Don't look it up yet. Look at the word first. Cut off the end.
+
+          **(4) Sophie:** Care … and less. I know "care"! And I know "careful", too.
+
+          **(5) Mr Hill:** Good. Now think: what does "-ful" do? And what does "-less" do?
+
+          **(6) Sophie:** Careful means "with care". So "-less" means … without?
+
+          **(7) Ellie:** Yes! Careless means without care. Peter didn't think about his bag.
+
+          **(8) Sophie:** Great. A new word, and I didn't use a dictionary!
+      - type: vocabulary
+        caption: Wörter aus dem Chat
+        languages: { source: de, target: en }
+        entries:
+          - target: careless
+            source: unvorsichtig, nachlässig
+      - type: single-choice
+        id: wortfamilien-start
+        text: Was tut Sophie zuerst, als sie careless nicht kennt?
+        options:
+          - text: Sie fragt nach der deutschen Übersetzung.
+            correct: false
+            info: Sie fragt nicht nach der Übersetzung. Mr Hill rät ihr, zuerst das Wort anzusehen.
+          - text: Sie schneidet das Ende ab und sucht ein Wort, das sie kennt.
+            correct: true
+            info: Sie erkennt care und kennt auch careful.
+          - text: Sie schlägt das Wort im Wörterbuch nach.
+            correct: false
+            info: Mr Hill sagt, sie soll das noch nicht tun.
+        explanation: Zuerst suchst du im unbekannten Wort einen Teil, den du schon kennst.
+  - type: section
+    id: werkzeug
+    title: Die Werkzeugkarte Wortfamilie
+    blocks:
+      - type: figure
+        image: images/wortfamilie.svg
+        alt: Drei Wörter untereinander. Das erste ist nur der grüne Block help. Beim zweiten hängt der orange Block ful an help, beim dritten der orange Block less.
+        caption: Eine Wortfamilie hat einen gemeinsamen Stamm.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: "Klassenzimmer-Poster · Werkzeugkarte „Was tun, wenn ich ein Wort nicht kenne?“"
+        header: [Schritt, Was du tust, Beispiel]
+        rows:
+          - ["1", "Schneide Anfang und Ende ab: die Vorsilbe und die Nachsilbe.", "help + ful"]
+          - ["2", "Suche den Stamm, den du schon kennst.", "help"]
+          - [
+              "3",
+              "Frage, was die Silbe ändert, und setze die Bedeutung zusammen.",
+              "-ful: voller · -less: ohne · un-: nicht · -er: Person, die etwas tut",
+            ]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Wörter mit demselben **Stamm** sind eine **Wortfamilie**. Eine **Vorsilbe** steht vor dem Stamm (un-), eine **Nachsilbe** steht dahinter (-ful, -less, -er). Rate nicht nur: Prüfe immer, ob die Bedeutung in den Satz passt.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: language-task
+        id: wortfamilien-zerlegen
+        languages: { source: de, target: en }
+        mode: table
+        task: Zerlege die Wörter in Stamm und Silbe.
+        form: { case: hint, punctuation: ok }
+        table:
+          caption: Wörter zerlegen
+          header: [Wort, Stamm, Silbe]
+          rows:
+            - [hopeless, "[hope]", "[(-|)less]"]
+            - [colourful, "[colour]", "[(-|)ful]"]
+            - [unhappy, "[happy]", "[un(-|)]"]
+            - [teacher, "[teach]", "[(-|)er]"]
+        hint: Die Silbe steht am Anfang oder am Ende des Wortes. Der Rest ist der Stamm.
+      - type: matching
+        id: wortfamilien-silben
+        text: Ordne jeder Silbe ihre Bedeutung zu.
+        pairs:
+          - { left: "-ful", right: voller }
+          - { left: "-less", right: ohne }
+          - { left: "un-", right: nicht }
+          - { left: "-er", right: "Person, die etwas tut" }
+        explanation: Eine Silbe hat immer dieselbe Bedeutung, auch bei neuen Wörtern.
+      - type: language-task
+        id: wortfamilien-bilden
+        languages: { source: de, target: en }
+        mode: gap
+        task: Bilde das Wort. Ergänze die fehlende Silbe.
+        form: { case: hint, punctuation: ok }
+        items:
+          - cue: full of colour
+            target: The picture is colour[ful].
+            mistakes:
+              - answer: The picture is colourless.
+                message: -less heißt ohne. Gesucht ist voller.
+          - cue: without hope
+            target: The plan is hope[less].
+            mistakes:
+              - answer: The plan is hopeful.
+                message: -ful heißt voller. Gesucht ist ohne.
+          - cue: not happy
+            target: Peter is [un]happy.
+            mistakes:
+              - answer: Peter is happyless.
+                message: Das Gegenteil mit nicht bildest du mit der Vorsilbe un- vor dem Stamm.
+          - cue: a person who works
+            target: A [work]er is a person.
+            mistakes:
+              - answer: A workful is a person.
+                message: Die Person, die etwas tut, endet auf -er.
+        hint: Frage dich bei jeder Aufgabe, was die Silbe ändert.
+      - type: single-choice
+        id: wortfamilien-erschliessen
+        text: "Mr Hill sagt: „The hamster is homeless.“ Was bedeutet das?"
+        options:
+          - text: Der Hamster hat ein kleines Zuhause.
+            correct: false
+            info: -less heißt nicht weniger, sondern ohne.
+          - text: Der Hamster hat kein Zuhause.
+            correct: true
+            info: home ist der Stamm, -less heißt ohne.
+          - text: Der Hamster hat ein schönes Zuhause.
+            correct: false
+            info: Das wäre voller, also -ful, und nicht -less.
+        explanation: homeless heißt ohne Zuhause.
+      - type: language-task
+        id: wortfamilien-schreiben
+        languages: { source: de, target: en }
+        mode: write
+        task: Bilde das englische Wort aus Stamm und Silbe.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: nützlich (voller Nutzen)
+            target: useful
+            mistakes:
+              - answer: usefull
+                message: Die Nachsilbe -ful hat nur ein l.
+              - answer: useless
+                message: useless heißt nutzlos. Gesucht ist nützlich.
+          - source: unordentlich (nicht tidy)
+            target: untidy
+            mistakes:
+              - answer: tidyless
+                message: Das Gegenteil mit nicht bildest du mit der Vorsilbe un-.
+          - source: nutzlos (ohne Nutzen)
+            target: useless
+            mistakes:
+              - answer: unuse
+                message: Für ohne nimmst du die Nachsilbe -less hinter dem Stamm.
+        hint: Stamm plus Silbe, ohne Leerzeichen.
+  - type: section
+    id: anwenden
+    title: Selbst Wörter bilden
+    blocks:
+      - type: open-task
+        id: wortfamilien-selbst
+        task: Bilde zum Stamm play zwei weitere Wörter der Wortfamilie und schreibe mit ihnen zwei englische Sätze.
+        points:
+          - text: Der Text hat zwei Wörter mit dem Stamm play und einer Silbe, zum Beispiel player.
+            source: /wenn-ein-wort-fehlt/wortfamilien/#werkzeug
+          - text: Jeder Satz passt zur Bedeutung der Silbe.
+            source: /wenn-ein-wort-fehlt/wortfamilien/#werkzeug
+          - text: Ganze Sätze mit Punkt.
+            kind: form
+        solution: |
+          Ein Beispiel: A player is a person who plays games. The dog is playful. It plays with a ball all day.
+  - type: section
+    id: weiter
+    title: Wie es weitergeht
+    blocks:
+      - type: text
+        text: Zwei Werkzeuge liegen im Koffer. Sie helfen dir, wenn dir ein Wort fehlt oder du eines nicht kennst. Im nächsten Kapitel vergleichst du Englisch mit Deutsch.

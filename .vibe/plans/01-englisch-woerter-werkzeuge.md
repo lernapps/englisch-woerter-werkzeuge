@@ -191,11 +191,12 @@ Wie ein späterer Agent weitermacht: Inhaltsführer `.agents/skills/app-content/
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Muster: Kapitel 1, Seite umschreiben (Chat-Lesestück, Werkzeugkarte, Vokabelblock, mind. 4 Übungen) mit Kapitel- und Startseite; zeigt Chat, Karte, Relativsatz bauen
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-- [ ] Seite das-brauchst-du (Kapitel 1, recap relativsaetze, grammatik-fachbegriffe)
-- [ ] Seite wortfamilien (Chat, Silbenleiste, zerlegen und bilden, Übungen)
+      Creator: Orchestrator: Musterseite umschreiben: Ja; übrige Seiten ohne Rückfragen nach dem Muster; Gesamtcheck und Sprachprüfung vor dem Vorschau-PR; Push nur work
+- [x] Seite das-brauchst-du (Kapitel 1, recap relativsaetze, grammatik-fachbegriffe)
+- [x] Seite wortfamilien (Chat, Silbenleiste, zerlegen und bilden, Übungen)
 - [ ] Seite das-brauchst-du (Kapitel 2, recap praepositionen-ort)
 - [ ] Seite phrasal-verbs (Sachfall, Teilchen zuordnen, Pronomenstellung, Übungen)
 - [ ] Seite false-friends (Fall mit Übersetzung, Warnschild, Übungen)

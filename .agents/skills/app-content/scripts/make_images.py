@@ -35,7 +35,34 @@ def koffer(n: int) -> str:
     )
 
 
+def wortfamilie() -> str:
+    """Die Wortfamilie help: Stamm grün, Silben orange."""
+    rows = []
+    for i, (stem, suf) in enumerate([("help", ""), ("help", "ful"), ("help", "less")]):
+        y = 30 + i * 70
+        rows.append(
+            f'<rect x="60" y="{y}" width="150" height="50" rx="8" fill="#138d75"/>'
+            f'<text x="135" y="{y + 33}" font-size="24" text-anchor="middle" font-family="sans-serif" fill="#ffffff">{stem}</text>'
+        )
+        if suf:
+            rows.append(
+                f'<rect x="216" y="{y}" width="120" height="50" rx="8" fill="#a04000"/>'
+                f'<text x="276" y="{y + 33}" font-size="24" text-anchor="middle" font-family="sans-serif" fill="#ffffff">{suf}</text>'
+            )
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" role="img">'
+        '<rect width="480" height="290" fill="#f4efe2"/>'
+        + "".join(rows)
+        + '<text x="360" y="60" font-size="16" font-family="sans-serif" fill="#1b1b1b">Stamm</text>'
+        '<text x="360" y="85" font-size="16" font-family="sans-serif" fill="#1b1b1b">grün</text>'
+        '<text x="360" y="130" font-size="16" font-family="sans-serif" fill="#1b1b1b">Silbe</text>'
+        '<text x="360" y="155" font-size="16" font-family="sans-serif" fill="#1b1b1b">orange</text>'
+        "</svg>\n"
+    )
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for n in range(1, 6):
         (OUT / f"werkzeugkoffer-{n}.svg").write_text(koffer(n), encoding="utf-8")
+    (OUT / "wortfamilie.svg").write_text(wortfamilie(), encoding="utf-8")
