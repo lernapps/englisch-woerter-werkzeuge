@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: Relativsätze und die Fachbegriffe noch einmal kurz, bevor es um fehlende Wörter geht.
+recap: [englisch/relativsaetze, englisch/grammatik-fachbegriffe]
+scope: Die Seite wiederholt nur die notwendigen Relativsätze mit who, which und that und die Fachbegriffe noun, verb, adjective, sentence und tense. Neue Inhalte gibt es nicht, auch keine Übung.
+blocks:
+  - type: section
+    id: einstieg
+    title: Das solltest du schon können
+    blocks:
+      - type: text
+        text: "Kannst du das schon? **Ich kann notwendige Relativsätze mit who, which, that und whose bilden.** Das ist der Baustein „Notwendige Relativsätze“. Du brauchst ihn gleich: Ein Relativsatz sagt, welche Sache oder welche Person gemeint ist."
+      - type: text
+        text: "Dazu kommt der Baustein „Grammatische Fachbegriffe“: **Ich kann grundlegende Fachbegriffe wie noun, verb, adjective, tense und sentence verstehen und verwenden.** Ein noun ist das Wort für ein Ding, ein Tier, eine Person oder einen Ort, ein verb sagt, was jemand tut, ein adjective sagt, wie etwas ist, ein sentence ist ein ganzer Satz und ein tense ist eine Zeitform."
+      - type: table
+        caption: Klassenzimmer-Poster · Der Relativsatz
+        header: [Wen oder was beschreibst du?, Welches Wort?, Beispiel]
+        rows:
+          - [eine Person, who oder that, The girl who sits next to me is Ellie.]
+          - [eine Sache, which oder that, The book which is on the table is new.]

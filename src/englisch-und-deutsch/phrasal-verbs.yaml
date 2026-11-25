@@ -1,0 +1,207 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Werkzeug 3: Verben mit Teilchen"
+description: "Ein Infoblatt für Gastschüler zeigt viele Verben mit Teilchen. Du lernst, sie als eine Einheit zu lesen und zu benutzen."
+competencies: [phrasal-verbs]
+scope: "Die Seite stellt das Werkzeug Teilchen vor. Ein phrasal verb besteht aus einem Verb und einem Teilchen. Der Sinn ergibt sich nicht aus den einzelnen Wörtern, deshalb liest man beide als eine Einheit (give up heißt aufgeben, look after heißt sich kümmern um, find out heißt herausfinden). Bei einem Objekt kann das Teilchen davor oder dahinter stehen (hand in the form, hand the form in). Ist das Objekt ein Pronomen, steht das Teilchen dahinter (hand it in). Nicht hier, weil es spätere Seiten sind: false friends und der Sprachvergleich."
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Infoblatt für Gastschüler
+    blocks:
+      - type: text
+        text: "Mr Hill hat Sophie ein Infoblatt eines Austauschprogramms gegeben. Es ist in einfachem Englisch geschrieben, und fast jede Zeile hat ein Verb mit Teilchen. **Das kannst du danach:** Du liest ein Verb mit Teilchen als eine Einheit und benutzt es richtig im Satz."
+      - type: text
+        text: |
+          **Welcome pack for guest students**
+
+          **(1)** Please read this sheet before you set off.
+
+          **(2)** Fill in the form on the last page and hand it in at the school office on your first day.
+
+          **(3)** At the station, your host family will pick you up. If you are late, don't give up: call the number on your card.
+
+          **(4)** Your host family will look after you. Please find out the house rules in the first week.
+
+          **(5)** Get up on time, because the school bus doesn't wait.
+
+          **(6)** Take off your shoes at the door. Turn off the lights when you leave your room.
+
+          **(7)** In winter, put on a warm coat.
+      - type: vocabulary
+        caption: Wörter aus dem Infoblatt
+        languages: { source: de, target: en }
+        entries:
+          - target: host family
+            source: die Gastfamilie
+          - target: fill in
+            source: ausfüllen
+          - target: hand in
+            source: abgeben
+          - target: set off
+            source: losfahren
+      - type: single-choice
+        id: phrasal-verbs-start
+        text: Was soll ein Gastschüler am ersten Tag mit dem Formular tun?
+        options:
+          - text: Er soll es im Schulbüro abgeben.
+            correct: true
+            info: In Zeile (2) steht hand it in at the school office.
+          - text: Er soll es zu Hause lassen.
+            correct: false
+            info: Das Blatt sagt, dass man es im Schulbüro abgibt, nicht dass man es zu Hause lässt.
+          - text: Er soll es der Gastfamilie geben.
+            correct: false
+            info: "In Zeile (2) steht, dass man es im Schulbüro abgibt, nicht bei der Familie."
+        explanation: Das Formular wird ausgefüllt und am ersten Tag im Schulbüro abgegeben.
+  - type: section
+    id: werkzeug
+    title: Die Werkzeugkarte Teilchen
+    blocks:
+      - type: figure
+        image: images/werkzeugkoffer-3.svg
+        alt: Ein Werkzeugkoffer mit fünf Fächern. Die ersten drei Fächer sind gefüllt und heißen Umschreiben, Wortfamilie und Teilchen, die anderen zwei sind noch leer.
+        caption: Der Koffer hat jetzt drei Werkzeuge.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: "Klassenzimmer-Poster · Werkzeugkarte „Was tun bei einem Verb mit Teilchen?“"
+        header: [Schritt, Was du tust, Beispiel]
+        rows:
+          - [
+              "1",
+              "Lies Verb und Teilchen als eine Einheit. Übersetze nicht Wort für Wort.",
+              "grow up: aufwachsen, nicht „wachsen hinauf“",
+            ]
+          - ["2", "Prüfe den Sinn im Satz oder im Wörterbuch.", "sit down: sich hinsetzen"]
+          - [
+              "3",
+              "Bei Verben, die man trennen kann: Ein Pronomen wie it steht vor dem Teilchen, ein Nomen davor oder dahinter.",
+              "write it down · write down the word · write the word down",
+            ]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Das Teilchen ändert den Sinn des Verbs oft ganz. Verb und Teilchen bleiben eine Einheit. Nicht jedes Verb mit Teilchen lässt sich trennen: Bei manchen steht das Teilchen immer direkt hinter dem Verb.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: phrasal-verbs-zeile
+        text: In welcher Zeile des Infoblatts steht, dass man bei Verspätung nicht aufgeben soll?
+        options:
+          - text: Zeile (3)
+            correct: true
+            info: In Zeile (3) steht don't give up.
+          - text: Zeile (5)
+            correct: false
+            info: In Zeile (5) geht es darum, rechtzeitig aufzustehen.
+          - text: Zeile (6)
+            correct: false
+            info: In Zeile (6) geht es um Schuhe und Licht.
+        explanation: give up heißt aufgeben.
+      - type: matching
+        id: phrasal-verbs-zuordnen
+        text: Ordne jedem Verb mit Teilchen seine Bedeutung zu.
+        pairs:
+          - { left: give up, right: aufgeben }
+          - { left: look after, right: sich kümmern um }
+          - { left: find out, right: herausfinden }
+          - { left: take off, right: ausziehen }
+          - { left: pick up, right: abholen }
+        explanation: Jedes Verb mit Teilchen hat einen eigenen Sinn, den man nicht aus den Einzelwörtern ableitet.
+      - type: language-task
+        id: phrasal-verbs-teilchen
+        languages: { source: de, target: en }
+        mode: choice
+        task: Wähle das richtige Teilchen.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Mach bitte das Radio aus.
+            target: Please turn [off] the radio.
+            distractors: [[on, up]]
+            mistakes:
+              - answer: Please turn on the radio.
+                message: turn on heißt anschalten, nicht ausschalten.
+              - answer: Please turn up the radio.
+                message: turn up heißt lauter stellen.
+          - source: Zieh bitte deine Jacke an.
+            target: Please put [on] your jacket.
+            distractors: [[off, away]]
+            mistakes:
+              - answer: Please put off your jacket.
+                message: put off heißt verschieben, nicht anziehen.
+              - answer: Please put away your jacket.
+                message: put away heißt wegräumen.
+          - source: Steh bitte auf.
+            target: Please get [up].
+            distractors: [[down, out]]
+            mistakes:
+              - answer: Please get down.
+                message: get down heißt herunterkommen, nicht aufstehen.
+              - answer: Please get out.
+                message: get out heißt hinausgehen.
+        hint: Frage dich, welches Teilchen zur deutschen Bedeutung passt.
+      - type: single-choice
+        id: phrasal-verbs-pronomen
+        text: "Welcher Satz ist richtig? Du ersetzt das Radio durch das Pronomen it."
+        options:
+          - text: Please turn off it.
+            correct: false
+            info: Ein Pronomen steht vor dem Teilchen, nicht dahinter.
+          - text: Please turn it off.
+            correct: true
+            info: Das Pronomen it steht zwischen turn und off.
+          - text: Please off turn it.
+            correct: false
+            info: In diesem Satz steht das Teilchen nicht vor dem Verb.
+        explanation: Bei einem Pronomen steht das Teilchen nach dem Objekt.
+      - type: language-task
+        id: phrasal-verbs-schreiben
+        languages: { source: de, target: en }
+        mode: write
+        task: Schreibe den Satz auf Englisch.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Gib nicht auf!
+            target: (Don't|Do not) give up!
+            mistakes:
+              - answer: Don't give!
+                message: give allein heißt geben. Erst give up heißt aufgeben.
+              - answer: Don't up give!
+                message: Das Teilchen steht hinter dem Verb.
+          - source: Er kümmert sich um den Hund.
+            target: He (looks after|is looking after|takes care of|is taking care of) the dog.
+            mistakes:
+              - answer: He looks the dog after.
+                message: Bei look after steht das Teilchen direkt hinter dem Verb.
+          - source: Wir ziehen unsere Hüte an.
+            target: We (put on our hats|put our hats on|are putting on our hats|are putting our hats on).
+            mistakes:
+              - answer: We put to our hats.
+                message: Das Teilchen heißt on. to ist hier falsch.
+        hint: Verb und Teilchen gehören zusammen. Prüfe, ob das Objekt ein Nomen oder ein Pronomen ist.
+  - type: section
+    id: anwenden
+    title: Selbst entscheiden
+    blocks:
+      - type: open-task
+        id: phrasal-verbs-selbst
+        task: Wähle eine Regel des Infoblatts, die du sinnvoll oder nicht sinnvoll findest. Schreibe in zwei bis drei englischen Sätzen deine Meinung und benutze dabei ein Verb mit Teilchen.
+        points:
+          - text: Der Text nennt eine Regel des Blatts und sagt, ob sie sinnvoll ist.
+            source: /englisch-und-deutsch/phrasal-verbs/#einstieg
+          - text: Der Text benutzt ein Verb mit Teilchen richtig, zum Beispiel get up oder turn off.
+            source: /englisch-und-deutsch/phrasal-verbs/#werkzeug
+          - text: Ganze Sätze mit einer Begründung (because …).
+            kind: form
+        solution: |
+          Ein Beispiel: I think the rule about the shoes is fine because the floor stays clean. Everyone should take off their shoes at the door.
+  - type: section
+    id: weiter
+    title: Wie es weitergeht
+    blocks:
+      - type: text
+        text: Das dritte Werkzeug liegt im Koffer. Auf der nächsten Seite gibt es ein Warnschild für Wörter, die wie deutsche aussehen und etwas ganz anderes bedeuten.

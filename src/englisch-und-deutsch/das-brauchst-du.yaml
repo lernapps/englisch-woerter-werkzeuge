@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du hier
+description: Die Präpositionen des Ortes noch einmal kurz, bevor es um Verben mit Teilchen geht.
+recap: englisch/praepositionen-ort
+scope: Die Seite wiederholt nur die Präpositionen des Ortes (in, on, under, next to, behind). Neue Inhalte gibt es nicht, auch keine Übung.
+blocks:
+  - type: section
+    id: einstieg
+    title: Das solltest du schon können
+    blocks:
+      - type: text
+        text: "Kannst du das schon? **Ich kann mit Präpositionen wie in, on, under, next to und behind sagen, wo etwas ist.** Das ist der Baustein „Präpositionen des Ortes“. Du brauchst ihn gleich: Viele Teilchen bei phrasal verbs (on, off, up, out, in) sehen aus wie Präpositionen. Sie sagen dort aber oft nicht, wo etwas ist, sondern ändern den Sinn des Verbs."
+      - type: table
+        caption: Klassenzimmer-Poster · Wo ist etwas?
+        header: [Wort, Beispiel]
+        rows:
+          - [in, The cat is in the box.]
+          - [on, The book is on the table.]
+          - [under, The ball is under the chair.]
+          - [next to, The bag is next to the door.]
+          - [behind, The bike is behind the house.]

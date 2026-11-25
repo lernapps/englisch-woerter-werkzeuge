@@ -1,0 +1,200 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Werkzeug 1: Ein fehlendes Wort umschreiben"
+description: "Im Klassenchat fehlt Sophie ein Wort. Du lernst, es mit a thing which … und a person who … zu umschreiben."
+competencies: [umschreiben]
+scope: Die Seite stellt das Werkzeug Umschreiben vor. Fehlt ein englisches Wort, sagt man, was es ist, und beschreibt es mit einem Relativsatz. Für eine Sache steht a thing which oder a thing that, für eine Person a person who oder a person that. Ein Wort lässt sich auch mit seinem Gegenteil mit not umschreiben (not cheap für expensive). Der Relativsatz kommt aus dem Baustein Notwendige Relativsätze. Nicht hier, weil es spätere Seiten sind. Wortfamilien, phrasal verbs und false friends.
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Wort fehlt im Klassenchat
+    blocks:
+      - type: text
+        text: "Du kennst das: Du willst etwas sagen, aber ein Wort fehlt dir. Sophie geht es im Klassenchat so. Dort schreiben auch Ellie, Amir und ihr Lehrer Mr Hill. Lies den Chat und achte darauf, was sie tut. **Das kannst du danach:** Du umschreibst ein Wort, das dir fehlt, mit einem Relativsatz oder mit seinem Gegenteil."
+      - type: text
+        text: |
+          **(1) Sophie:** Hi Ellie! I am in the shop with Mrs Parker. I want to buy a … sorry, I don't know the word!
+
+          **(2) Ellie:** Can you tell me what it is? Then I can help.
+
+          **(3) Sophie:** It's a thing which you use to get rid of pencil lines.
+
+          **(4) Ellie:** Ah, a rubber! They are next to the pencils.
+
+          **(5) Sophie:** Thank you! Amir, what is the word for the man who has the keys to the whole building?
+
+          **(6) Amir:** That's the caretaker. He looks after the school.
+
+          **(7) Mr Hill:** Well done, Sophie! If you don't know a word, don't stop. Say what the thing does. Or use the opposite: you don't know "expensive", but you know "cheap". Say "not cheap".
+
+          **(8) Sophie:** Thanks! Then I can say: "This pen is not cheap."
+      - type: vocabulary
+        caption: Wörter aus dem Chat
+        languages: { source: de, target: en }
+        entries:
+          - target: rubber
+            source: der Radiergummi
+            note: So sagt man es in Großbritannien.
+          - target: caretaker
+            source: der Hausmeister
+          - target: get rid of
+            source: loswerden, entfernen
+      - type: single-choice
+        id: umschreiben-start
+        text: Was tut Sophie in Zeile (3), als ihr das Wort fehlt?
+        options:
+          - text: Sie schreibt das Wort auf Deutsch.
+            correct: false
+            info: Ellie kann kein Deutsch, und Sophie will Englisch sprechen.
+          - text: Sie sagt, wofür man die Sache braucht.
+            correct: true
+            info: Sie beschreibt die Sache, und Ellie errät das Wort.
+          - text: Sie hört auf zu schreiben.
+            correct: false
+            info: Sophie schreibt weiter. Das lobt Mr Hill später.
+        explanation: Beschreibe die Sache mit Wörtern, die du kennst.
+  - type: section
+    id: werkzeug
+    title: Die Werkzeugkarte Umschreiben
+    blocks:
+      - type: text
+        text: Ein **Werkzeug** ist hier ein Trick, mit dem du dir bei Wörtern hilfst. Die Werkzeuge liegen in einem Koffer. Auf der Werkzeugkarte steht, wie das Werkzeug geht.
+      - type: figure
+        image: images/werkzeugkoffer-1.svg
+        alt: Ein Werkzeugkoffer mit fünf Fächern. Das erste Fach ist gefüllt und heißt Umschreiben, die anderen vier sind noch leer.
+        caption: Der Koffer hat erst ein Werkzeug.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: "Klassenzimmer-Poster · Werkzeugkarte „Was tun, wenn mir ein Wort fehlt?“"
+        header: [Weg, Was du tust, Beispiel]
+        rows:
+          - [
+              "A",
+              "Sag mit einem Relativsatz, was es ist und was es tut. Für eine Sache nimmst du which oder that, für eine Person who oder that.",
+              "a thing which you wear on your head · a person who works in a hospital",
+            ]
+          - [
+              "B",
+              "Oder nimm ein Wort, das du kennst, und sag das Gegenteil mit not.",
+              "Dir fehlt old, du kennst new: not new",
+            ]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Weg B klappt, wenn es zu dem Wort genau ein Gegenteil gibt. Setze **not** direkt vor das Gegenteil.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: umschreiben-zeile
+        text: In welcher Zeile des Chats fragt Sophie nach einem Wort für eine Person?
+        options:
+          - text: Zeile (1)
+            correct: false
+            info: In Zeile (1) sucht Sophie ein Wort für eine Sache.
+          - text: Zeile (5)
+            correct: true
+            info: Das Wort who zeigt, dass es um eine Person geht.
+          - text: Zeile (7)
+            correct: false
+            info: In Zeile (7) gibt Mr Hill einen Rat.
+        explanation: Das Wort who im Relativsatz steht für eine Person.
+      - type: language-task
+        id: umschreiben-wort
+        languages: { source: de, target: en }
+        mode: choice
+        task: Wähle das Wort, das zur Beschreibung passt.
+        form: { case: hint, punctuation: ok }
+        items:
+          - cue: She is a person who plays games for a team.
+            target: She is a [player].
+            distractors: [[singer, teacher]]
+            mistakes:
+              - answer: She is a singer.
+                message: Ein singer singt. Die Person spielt.
+              - answer: She is a teacher.
+                message: Ein teacher unterrichtet. Die Person spielt.
+          - cue: It is a thing which you use to draw straight lines. It has numbers on it.
+            target: It is a [ruler].
+            distractors: [[pencil, rubber]]
+            mistakes:
+              - answer: It is a pencil.
+                message: Mit einem pencil schreibst oder zeichnest du, aber er hat keine Zahlen.
+              - answer: It is a rubber.
+                message: Mit einem rubber nimmst du Striche weg.
+        hint: Frage dich, was die Person tut oder wofür man die Sache braucht.
+      - type: ordering
+        id: umschreiben-reihenfolge
+        text: Bringe die Teile in die richtige Reihenfolge. So umschreibt jemand ein Wort.
+        items:
+          - it is
+          - a thing
+          - which
+          - you use
+          - to open
+          - a door
+        explanation: Erst steht, was es ist, dann which und was man damit tut.
+      - type: language-task
+        id: umschreiben-relativsatz
+        languages: { source: de, target: en }
+        mode: write
+        task: Schreibe den Satz auf Englisch. Er umschreibt das Wort mit einem Relativsatz.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Ein Messer ist eine Sache, mit der man Brot schneidet.
+            target: A knife is a thing (which|that) (you use to cut bread|you cut bread with|cuts bread|you can cut bread with).
+            mistakes:
+              - answer: A knife is a thing who you use to cut bread.
+                message: Für eine Sache nimmst du which oder that, nicht who.
+          - source: Eine Lehrerin ist eine Person, die Kinder in der Schule unterrichtet.
+            target: A teacher is a person (who|that) teaches (children|kids|pupils|students) (at|in) school.
+            mistakes:
+              - answer: A teacher is a person which teaches children at school.
+                message: Für eine Person nimmst du who oder that, nicht which.
+              - answer: A teacher is a person teaches children at school.
+                message: Dir fehlt who.
+          - source: Ein Koch ist eine Person, die in der Küche Essen macht.
+            target: A cook is a person (who|that) (makes food|makes meals|prepares food|prepares meals|cooks food|cooks meals|cooks) in the kitchen.
+            mistakes:
+              - answer: A cook is a person which makes food in the kitchen.
+                message: Für eine Person nimmst du who oder that, nicht which.
+        hint: Denke an die Karte. Erst sagst du, ob es eine Sache oder eine Person ist, dann kommt which, that oder who und dann, was sie tut.
+      - type: single-choice
+        id: umschreiben-gegenteil
+        text: Dir fehlt das Wort easy. Du kennst difficult. Welche Umschreibung passt?
+        options:
+          - text: It is very difficult.
+            correct: false
+            info: very difficult heißt sehr schwer. Das ist nicht easy, sondern das Gegenteil mit very.
+          - text: It is not difficult.
+            correct: true
+            info: Das Gegenteil von difficult mit not umschreibt easy.
+          - text: It is a bit difficult.
+            correct: false
+            info: a bit difficult heißt ein bisschen schwer. Das ist nicht easy.
+        explanation: Mit not und dem Gegenteil umschreibst du easy.
+  - type: section
+    id: anwenden
+    title: Selbst umschreiben
+    blocks:
+      - type: open-task
+        id: umschreiben-selbst
+        task: Wähle eine Sache aus deiner Schultasche und umschreibe sie in zwei bis drei englischen Sätzen, ohne ihren Namen zu nennen.
+        points:
+          - text: Der Text sagt zuerst, dass es eine Sache ist (It is a thing …).
+            source: /wenn-ein-wort-fehlt/umschreiben/#werkzeug
+          - text: Der Text hat einen Relativsatz mit which oder that, der sagt, was man mit der Sache tut.
+            source: /wenn-ein-wort-fehlt/umschreiben/#werkzeug
+          - text: Ganze Sätze mit Punkt.
+            kind: form
+        solution: |
+          Ein Beispiel für eine Trinkflasche: It is a thing which you take to school. You use it to drink water. It is not small.
+  - type: section
+    id: weiter
+    title: Wie es weitergeht
+    blocks:
+      - type: text
+        text: Das erste Werkzeug liegt im Koffer. Im nächsten Chat kennt Sophie ein Wort nicht und erschließt es über seine Wortfamilie.

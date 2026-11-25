@@ -1,0 +1,177 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Werkzeug 5: Eigene Vergleichsregeln"
+description: "Ein kurzer Sachtext vergleicht Englisch und Deutsch. Du leitest aus Beispielen Vergleichsregeln ab und stellst eigene auf."
+competencies: [sprachvergleich]
+scope: "Die Seite stellt das Werkzeug Vergleichsregel vor. Lernende sammeln Beispielpaare in Deutsch und Englisch, suchen das gemeinsame Muster und prüfen die Regel an einem neuen Satz. Drei Bereiche werden verglichen. Wortstellung: Im deutschen Hauptsatz steht das Verb an zweiter Stelle, im deutschen Nebensatz am Ende, das Englische behält überwiegend die Reihenfolge Subjekt, Verb, Objekt. Wortbildung: Deutsch fügt Wörter oft zu einem langen Wort zusammen, Englisch schreibt Zusammensetzungen oft getrennt (school bus), manchmal zusammen (homework). Ausdruck: Bei manchen Wörtern benutzt das Deutsche haben und ein Nomen (ich habe Durst), das Englische be und ein Adjektiv (I am thirsty). Quellen für Wortstellung und Wortbildung sind Wikipedia, V2 word order und Compound (linguistics)."
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei Sprachen, eine Familie
+    blocks:
+      - type: text
+        text: "Dein Koffer hat vier Werkzeuge. Das fünfte hilft dir, Englisch und Deutsch im Ganzen zu vergleichen. Sophie liest dazu einen kurzen Sachtext. Das Subjekt ist das, was etwas tut, das Objekt das, womit etwas getan wird. **Das kannst du danach:** Du vergleichst beide Sprachen und erklärst typische Unterschiede in Wortstellung, Wortbildung und Ausdruck mit einer eigenen Regel."
+      - type: text
+        text: |
+          **Two languages, one family**
+
+          **(1)** English and German belong to the same language family, the Germanic languages. Many words look alike, but the two languages also work in different ways.
+
+          **(2)** In a German main clause, the verb is in second place: "Heute spielt Peter Fußball." English is unusual in its family. It keeps the order subject, verb, object: "Peter plays football today." With "today" first, the order stays: "Today Peter plays football."
+
+          **(3)** In a German subordinate clause, the verb goes to the end: "…, weil er Hunger hat." In English, the order stays the same: "… because he is hungry."
+
+          **(4)** German often joins words into one long word, for example "Fahrradhelm". English often keeps two words: "bike helmet". But it also has closed compounds, such as "football".
+
+          **(5)** Expressions are different, too. A German speaker says "ich habe Hunger", an English speaker says "I am hungry".
+
+          *Quellen für die Fakten:* [V2 word order](https://en.wikipedia.org/wiki/V2_word_order) und [Compound (linguistics)](https://en.wikipedia.org/wiki/Compound_(linguistics)) in der englischen Wikipedia.
+      - type: vocabulary
+        caption: Wörter aus dem Sachtext
+        languages: { source: de, target: en }
+        entries:
+          - target: main clause
+            source: der Hauptsatz
+          - target: subordinate clause
+            source: der Nebensatz
+          - target: compound
+            source: das zusammengesetzte Wort
+      - type: single-choice
+        id: sprachvergleich-start
+        text: Was sagt der Text über die Wortstellung im Englischen?
+        options:
+          - text: Das Verb steht immer am Ende des Satzes.
+            correct: false
+            info: Das gilt für den deutschen Nebensatz, nicht für das Englische.
+          - text: Die Reihenfolge Subjekt, Verb, Objekt bleibt meistens gleich.
+            correct: true
+            info: Der Text sagt, dass Englisch diese Reihenfolge beibehält, auch im Nebensatz.
+          - text: Das Verb steht immer an zweiter Stelle wie im Deutschen.
+            correct: false
+            info: Im Deutschen steht das Verb im Hauptsatz an zweiter Stelle, im Englischen bleibt die Reihenfolge meistens gleich.
+        explanation: Das Englische hält die Reihenfolge Subjekt, Verb, Objekt meistens ein.
+  - type: section
+    id: werkzeug
+    title: Die Werkzeugkarte Vergleichsregel
+    blocks:
+      - type: figure
+        image: images/werkzeugkoffer-5.svg
+        alt: Ein Werkzeugkoffer mit fünf gefüllten Fächern. Sie heißen Umschreiben, Wortfamilie, Teilchen, Warnschild und Vergleichsregel.
+        caption: Der Koffer ist voll.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: table
+        caption: "Klassenzimmer-Poster · Werkzeugkarte „Wie vergleiche ich zwei Sprachen?“"
+        header: [Schritt, Was du tust]
+        rows:
+          - ["1", "Sammle zwei bis drei Beispielpaare: ein deutscher und ein englischer Satz mit derselben Bedeutung."]
+          - ["2", "Suche, was in allen Paaren gleich ist, und schreibe es in einem Satz auf: Das ist deine Regel."]
+          - ["3", "Prüfe die Regel an einem neuen Satz. Passt sie nicht, ändere sie."]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Eine Regel gilt nur, wenn sie für alle Beispielpaare stimmt. Ein einzelnes Paar ist noch keine Regel.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: sprachvergleich-zeile
+        text: In welcher Zeile des Textes geht es um Nebensätze?
+        options:
+          - text: Zeile (2)
+            correct: false
+            info: In Zeile (2) geht es um den Hauptsatz.
+          - text: Zeile (3)
+            correct: true
+            info: In Zeile (3) steht, dass das Verb im deutschen Nebensatz ans Ende geht.
+          - text: Zeile (4)
+            correct: false
+            info: In Zeile (4) geht es um zusammengesetzte Wörter.
+        explanation: Zeile (3) vergleicht den Nebensatz in beiden Sprachen.
+      - type: language-task
+        id: sprachvergleich-stellung
+        languages: { source: de, target: en }
+        mode: choice
+        task: Wähle die englische Wortstellung.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: Gestern sah ich einen Film.
+            target: Yesterday [I saw] a film.
+            distractors: [[saw I]]
+            mistakes:
+              - answer: Yesterday saw I a film.
+                message: Im Englischen bleibt die Reihenfolge Subjekt, Verb. Das Verb steht nicht vor dem Subjekt.
+          - source: Am Montag kaufte Sophie ein Buch.
+            target: On Monday [Sophie bought] a book.
+            distractors: [[bought Sophie]]
+            mistakes:
+              - answer: On Monday bought Sophie a book.
+                message: Im Englischen steht das Subjekt vor dem Verb, auch nach einer Zeitangabe am Anfang.
+        hint: In englischen Aussagesätzen steht das Subjekt vor dem Verb.
+      - type: ordering
+        id: sprachvergleich-reihenfolge
+        text: Bringe die Teile in die richtige Reihenfolge. Der Hauptsatz kommt zuerst. Der Nebensatz im Englischen hat dieselbe Reihenfolge wie der Hauptsatz.
+        items:
+          - he stays at home
+          - because
+          - he
+          - is ill
+        explanation: Auch im Nebensatz steht das Subjekt vor dem Verb.
+      - type: language-task
+        id: sprachvergleich-wortbildung
+        languages: { source: de, target: en }
+        mode: write
+        task: Schreibe das englische Wort. Achte darauf, ob es ein Wort oder zwei sind.
+        form: { case: hint, punctuation: ok }
+        items:
+          - source: der Schulbus
+            target: school bus
+            mistakes:
+              - answer: schoolbus
+                message: Hier schreibt man zwei Wörter.
+              - answer: bus school
+                message: Das bestimmende Wort steht vorn, also school bus.
+          - source: die Hausaufgaben
+            target: homework
+            mistakes:
+              - answer: house work
+                message: homework schreibt man in einem Wort. housework heißt Hausarbeit.
+        hint: Englisch schreibt Zusammensetzungen manchmal in zwei Wörtern, manchmal in einem.
+      - type: single-choice
+        id: sprachvergleich-ausdruck
+        text: "Ich habe Durst. Welcher englische Satz stimmt?"
+        options:
+          - text: I have thirst.
+            correct: false
+            info: Das ist Wort für Wort aus dem Deutschen übersetzt. Im Englischen nimmt man be.
+          - text: I am thirsty.
+            correct: true
+            info: Das Englische benutzt be und ein Adjektiv.
+          - text: I have thirsty.
+            correct: false
+            info: thirsty ist ein Adjektiv. Es steht nach be, nicht nach have.
+        explanation: Im Englischen sagt man I am thirsty.
+  - type: section
+    id: anwenden
+    title: Eine eigene Regel aufstellen
+    blocks:
+      - type: open-task
+        id: sprachvergleich-selbst
+        task: Wähle Wortstellung, Wortbildung oder Ausdruck. Schreibe in zwei bis drei Sätzen auf Deutsch eine Vergleichsregel und gib mindestens zwei Beispielpaare an (deutsch und englisch).
+        points:
+          - text: Der Text sagt, welchen Bereich er vergleicht.
+            kind: form
+          - text: Die Regel ist allgemein formuliert und gilt für beide Beispielpaare.
+            source: /englisch-und-deutsch/sprachvergleich/#werkzeug
+          - text: Es gibt mindestens zwei Beispielpaare mit deutschem und englischem Satz.
+            source: /englisch-und-deutsch/sprachvergleich/#einstieg
+        solution: |
+          Ein Beispiel: Beim Ausdruck sagt man bei manchen Wörtern im Deutschen haben und ein Nomen, im Englischen be und ein Adjektiv. Ich habe Angst heißt I am afraid. Ich habe Recht heißt I am right.
+  - type: section
+    id: weiter
+    title: Rückblick auf den Koffer
+    blocks:
+      - type: text
+        text: "Dein Werkzeugkoffer ist voll. Fehlt dir ein Wort, **umschreibst** du es. Kennst du ein Wort nicht, suchst du seine **Wortfamilie**. Bei einem Verb mit **Teilchen** liest du beide als eine Einheit. Bei einem Wort, das wie ein deutsches aussieht, beachtest du das **Warnschild**. Und wenn du Englisch und Deutsch vergleichst, schreibst du eine **Vergleichsregel**."
